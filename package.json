@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:worker": "wrangler deploy functions/_worker.ts --env production",
     "preview": "astro preview"
   },
   "dependencies": {
