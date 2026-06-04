@@ -283,7 +283,7 @@ const productOptions = [
         formData.set('image', compressed);
       }
 
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://nguyen-truong-thi-api.truongthi-nguyen.workers.dev/api/contact', {
         method: 'POST',
         body: formData,
       });
