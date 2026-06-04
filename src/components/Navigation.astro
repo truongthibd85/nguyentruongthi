@@ -1,0 +1,50 @@
+---
+const navLinks = [
+  { href: '/', label: 'Trang chủ' },
+  { href: '/about', label: 'Giới thiệu' },
+  { href: '/experience', label: 'Kinh nghiệm' },
+  { href: '/services', label: 'Dịch vụ' },
+  { href: '/contact', label: 'Liên hệ' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="font-heading text-xl font-bold text-dark hover:text-primary transition-colors">
+      NTT
+    </a>
+    <ul class="hidden md:flex items-center gap-8">
+      {navLinks.map(link => (
+        <li>
+          <a href={link.href} class="text-sm font-medium text-dark hover:text-primary transition-colors">
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <ul class="px-6 py-4 space-y-3">
+      {navLinks.map(link => (
+        <li>
+          <a href={link.href} class="block text-sm font-medium text-dark hover:text-primary transition-colors py-2">
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

@@ -1,0 +1,68 @@
+---
+const services = [
+  {
+    title: 'In Sticker theo yêu cầu',
+    titleEn: 'Custom Sticker Printing',
+    icon: ' sticker',
+    description: 'Decal sticker, die-cut sticker, kiss-cut sticker, sheet sticker, clear sticker, reflective sticker, transfer sticker, tem bảo hành và sticker giấy.',
+    features: ['Decal Sticker', 'Die-cut & Kiss-cut', 'Sheet Stickers', 'Clear & Reflective', 'Transfer Sticker'],
+  },
+  {
+    title: 'Giải pháp in ấn B2B',
+    titleEn: 'B2B Brand Printing Solutions',
+    icon: '🏢',
+    description: 'Tem nhãn, bao bì, sticker sản phẩm, sản phẩm nhận diện thương hiệu, quà tặng quảng cáo và hỗ trợ in ấn cho SME và doanh nghiệp.',
+    features: ['Labels', 'Packaging', 'Brand Merchandise', 'Promotional Gifts', 'Custom Printing'],
+  },
+  {
+    title: 'Phát triển sản phẩm sáng tạo',
+    titleEn: 'Creative Product Development',
+    icon: '💡',
+    description: 'Hỗ trợ thương hiệu từ ý tưởng, định hướng thiết kế, tư vấn vật liệu, làm mẫu, in ấn đến sản xuất hoàn thiện.',
+    features: ['Tư vấn ý tưởng', 'Design Direction', 'Material Consulting', 'Sample Development', 'Full Production'],
+  },
+  {
+    title: 'Sản phẩm Sticker bán lẻ & cộng đồng',
+    titleEn: 'Retail & Community Sticker Products',
+    icon: '🎨',
+    description: 'Bộ sưu tập sticker, sticker lifestyle, sticker trang trí và sản phẩm sáng tạo theo phong cách DIY.',
+    features: ['Sticker Collections', 'Lifestyle Stickers', 'Decorative Stickers', 'DIY Products', 'Community Products'],
+  },
+];
+---
+
+<section class="section-padding bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="section-title">Dịch vụ</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Giải pháp in ấn theo yêu cầu cho cá nhân, local brand, SME và khách hàng B2B
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      {services.map((service, index) => (
+        <div class="group bg-white border border-gray-200 rounded-2xl p-8 hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+          <div class="text-4xl mb-4">{service.icon}</div>
+          <h3 class="font-heading text-2xl font-bold text-dark mb-2">{service.title}</h3>
+          <p class="text-primary text-sm font-medium mb-4">{service.titleEn}</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">{service.description}</p>
+          <div class="flex flex-wrap gap-2">
+            {service.features.map(feature => (
+              <span class="px-3 py-1 bg-orange-50 text-primary text-xs font-medium rounded-full">
+                {feature}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-gray-600 mb-6">
+        Bạn cần tư vấn về giải pháp in ấn cho thương hiệu của mình?
+      </p>
+      <a href="/contact" class="btn-primary">Liên hệ tư vấn ngay</a>
+    </div>
+  </div>
+</section>

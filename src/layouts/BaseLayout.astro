@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import FloatingContact from '../components/FloatingContact.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Co-Founder & Partner Director at Sticker Factory | Custom Sticker & B2B Printing Solutions | Vietnam' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Thi Nguyễn (Leon)" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Navigation />
+    <main>
+      <slot />
+    </main>
+    <FloatingContact />
+    <Footer />
+  </body>
+</html>

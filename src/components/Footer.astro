@@ -1,0 +1,43 @@
+---
+const socialLinks = [
+  { href: 'https://www.instagram.com/stickermanvn', label: 'Instagram', icon: 'instagram' },
+  { href: 'https://www.facebook.com/truongthivn', label: 'Facebook', icon: 'facebook' },
+  { href: 'https://www.linkedin.com/in/nguyentruongthi', label: 'LinkedIn', icon: 'linkedin' },
+  { href: 'https://stickerfactory.vn', label: 'Website', icon: 'globe' },
+];
+---
+
+<footer class="bg-dark text-white py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <h3 class="font-heading text-xl font-bold mb-4">Thi Nguyễn (Leon)</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Co-Founder & Partner Director at Sticker Factory<br />
+          TP. Hồ Chí Minh, Việt Nam
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Liên kết</h4>
+        <div class="flex gap-4">
+          {socialLinks.map(link => (
+            <a href={link.href} target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-primary transition-colors">
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Liên hệ</h4>
+        <p class="text-gray-400 text-sm">truongthinguyen@stickerfactory.vn</p>
+        <p class="text-gray-400 text-sm">0989 83 74 85</p>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 pt-8 text-center">
+      <p class="text-gray-500 text-sm">
+        &copy; 2024 Thi Nguyễn (Leon). All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
