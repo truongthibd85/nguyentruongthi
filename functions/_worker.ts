@@ -1,12 +1,23 @@
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
 const handler = {
   async fetch(request: Request, env: { TELEGRAM_BOT_TOKEN: string; TELEGRAM_CHAT_ID: string }): Promise<Response> {
     const url = new URL(request.url);
+
+    // Handle CORS preflight
+    if (request.method === 'OPTIONS') {
+      return new Response(null, { status: 204, headers: CORS_HEADERS });
+    }
 
     // Only handle POST /api/contact
     if (request.method !== 'POST' || url.pathname !== '/api/contact') {
       return new Response(JSON.stringify({ error: 'Not found' }), {
         status: 404,
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...CORS_HEADERS },
       });
     }
 
@@ -22,14 +33,14 @@ const handler = {
       if (!name || !phone || !email || !product || !message) {
         return new Response(JSON.stringify({ error: 'Vui lòng điền đầy đủ thông tin.' }), {
           status: 400,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', ...CORS_HEADERS },
         });
       }
 
       if (image && image.size > 5 * 1024 * 1024) {
         return new Response(JSON.stringify({ error: 'File quá lớn (tối đa 5MB).' }), {
           status: 400,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', ...CORS_HEADERS },
         });
       }
 
@@ -47,7 +58,7 @@ const handler = {
       if (!msgRes.ok) {
         return new Response(JSON.stringify({ error: 'Không thể gửi tin nhắn.' }), {
           status: 500,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', ...CORS_HEADERS },
         });
       }
 
@@ -65,12 +76,12 @@ const handler = {
       }
 
       return new Response(JSON.stringify({ success: true }), {
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...CORS_HEADERS },
       });
     } catch (err) {
       return new Response(JSON.stringify({ error: 'Lỗi server: ' + (err as Error).message }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...CORS_HEADERS },
       });
     }
   },
