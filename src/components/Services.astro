@@ -3,8 +3,9 @@ const services = [
   {
     title: 'In Sticker theo yêu cầu',
     titleEn: 'Custom Sticker Printing',
-    icon: ' sticker',
+    icon: '🏷️',
     description: 'Decal sticker, die-cut sticker, kiss-cut sticker, sheet sticker, clear sticker, reflective sticker, transfer sticker, tem bảo hành và sticker giấy.',
+    descriptionEn: 'Decal stickers, die-cut, kiss-cut, sheet stickers, clear, reflective, transfer stickers, warranty labels and paper stickers.',
     features: ['Decal Sticker', 'Die-cut & Kiss-cut', 'Sheet Stickers', 'Clear & Reflective', 'Transfer Sticker'],
   },
   {
@@ -12,6 +13,7 @@ const services = [
     titleEn: 'B2B Brand Printing Solutions',
     icon: '🏢',
     description: 'Tem nhãn, bao bì, sticker sản phẩm, sản phẩm nhận diện thương hiệu, quà tặng quảng cáo và hỗ trợ in ấn cho SME và doanh nghiệp.',
+    descriptionEn: 'Labels, packaging, product stickers, brand merchandise, promotional gifts and printing support for SMEs and businesses.',
     features: ['Labels', 'Packaging', 'Brand Merchandise', 'Promotional Gifts', 'Custom Printing'],
   },
   {
@@ -19,6 +21,7 @@ const services = [
     titleEn: 'Creative Product Development',
     icon: '💡',
     description: 'Hỗ trợ thương hiệu từ ý tưởng, định hướng thiết kế, tư vấn vật liệu, làm mẫu, in ấn đến sản xuất hoàn thiện.',
+    descriptionEn: 'Supporting brands from ideation, design direction, material consulting, prototyping, printing to full production.',
     features: ['Tư vấn ý tưởng', 'Design Direction', 'Material Consulting', 'Sample Development', 'Full Production'],
   },
   {
@@ -26,30 +29,44 @@ const services = [
     titleEn: 'Retail & Community Sticker Products',
     icon: '🎨',
     description: 'Bộ sưu tập sticker, sticker lifestyle, sticker trang trí và sản phẩm sáng tạo theo phong cách DIY.',
+    descriptionEn: 'Sticker collections, lifestyle stickers, decorative stickers and creative DIY-style products.',
     features: ['Sticker Collections', 'Lifestyle Stickers', 'Decorative Stickers', 'DIY Products', 'Community Products'],
   },
 ];
 ---
 
-<section class="section-padding bg-white">
+<section class="section-padding bg-brand-white">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-12">
-      <h2 class="section-title">Dịch vụ</h2>
+      <h2 class="section-title">
+        <span data-lang="vi">Dịch vụ</span>
+        <span data-lang="en">Services</span>
+      </h2>
       <p class="text-gray-600 max-w-2xl mx-auto">
-        Giải pháp in ấn theo yêu cầu cho cá nhân, local brand, SME và khách hàng B2B
+        <span data-lang="vi">Giải pháp in ấn theo yêu cầu cho cá nhân, local brand, SME và khách hàng B2B</span>
+        <span data-lang="en">Custom printing solutions for individuals, local brands, SMEs and B2B clients</span>
       </p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-8">
-      {services.map((service, index) => (
-        <div class="group bg-white border border-gray-200 rounded-2xl p-8 hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+      {services.map(service => (
+        <div class="group bg-brand-white border-2 border-brand-red/20 rounded-2xl p-8 hover:border-brand-red/60 hover:shadow-xl transition-all duration-300">
           <div class="text-4xl mb-4">{service.icon}</div>
-          <h3 class="font-heading text-2xl font-bold text-dark mb-2">{service.title}</h3>
-          <p class="text-primary text-sm font-medium mb-4">{service.titleEn}</p>
-          <p class="text-gray-600 text-sm leading-relaxed mb-6">{service.description}</p>
+          <h3 class="font-heading text-2xl font-bold text-brand-black mb-1">
+            <span data-lang="vi">{service.title}</span>
+            <span data-lang="en">{service.titleEn}</span>
+          </h3>
+          <p class="text-brand-red text-sm font-medium mb-4">
+            <span data-lang="vi">{service.titleEn}</span>
+            <span data-lang="en">{service.title}</span>
+          </p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6 font-body">
+            <span data-lang="vi">{service.description}</span>
+            <span data-lang="en">{service.descriptionEn}</span>
+          </p>
           <div class="flex flex-wrap gap-2">
             {service.features.map(feature => (
-              <span class="px-3 py-1 bg-orange-50 text-primary text-xs font-medium rounded-full">
+              <span class="px-3 py-1 bg-brand-red/5 text-brand-red text-xs font-medium rounded-full font-body">
                 {feature}
               </span>
             ))}
@@ -60,9 +77,13 @@ const services = [
 
     <div class="mt-12 text-center">
       <p class="text-gray-600 mb-6">
-        Bạn cần tư vấn về giải pháp in ấn cho thương hiệu của mình?
+        <span data-lang="vi">Bạn cần tư vấn về giải pháp in ấn cho thương hiệu của mình?</span>
+        <span data-lang="en">Need printing solutions for your brand?</span>
       </p>
-      <a href="/contact" class="btn-primary">Liên hệ tư vấn ngay</a>
+      <a href="/contact" class="btn-primary">
+        <span data-lang="vi">Liên hệ tư vấn ngay</span>
+        <span data-lang="en">Contact for Consultation</span>
+      </a>
     </div>
   </div>
 </section>

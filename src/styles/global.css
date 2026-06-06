@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply font-body text-dark bg-light;
+    @apply font-body text-brand-black bg-brand-white;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -18,32 +18,50 @@
   }
 }
 
+/* Language toggle */
+[data-lang="en"] { display: none; }
+body.lang-en [data-lang="vi"] { display: none; }
+body.lang-en [data-lang="en"] { display: inline; }
+body.lang-en [data-lang-en-block] { display: none; }
+body.lang-en [data-lang-vi-block] { display: block; }
+[data-lang-vi-block] { display: block; }
+[data-lang-en-block] { display: none; }
+
 @layer components {
   .section-padding {
     @apply py-16 md:py-24 px-6;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-8 text-dark;
+    @apply text-3xl md:text-4xl font-bold mb-8 text-brand-black font-heading;
   }
 
   .btn-primary {
-    @apply inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg
-           hover:bg-orange-600 transition-colors duration-300;
+    @apply inline-block px-6 py-3 bg-brand-red text-brand-white font-semibold rounded-lg
+           hover:bg-red-700 transition-colors duration-300;
   }
 
   .btn-outline {
-    @apply inline-block px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg
-           hover:bg-primary hover:text-white transition-colors duration-300;
+    @apply inline-block px-6 py-3 border-2 border-brand-red text-brand-red font-semibold rounded-lg
+           hover:bg-brand-red hover:text-brand-white transition-colors duration-300;
   }
 
   .lang-toggle {
-    @apply text-sm font-medium cursor-pointer hover:text-primary transition-colors;
+    @apply text-sm font-medium cursor-pointer px-3 py-1 rounded border border-brand-red text-brand-red
+           hover:bg-brand-red hover:text-brand-white transition-colors duration-200;
+  }
+
+  .lang-toggle.active {
+    @apply bg-brand-red text-brand-white;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-red to-brand-yellow bg-clip-text text-transparent;
+  }
+
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, #e42327 0%, #ffce07 100%);
   }
 }

@@ -4,15 +4,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#FF6B35',
-        secondary: '#F7C948',
+        brand: {
+          red: '#e42327',
+          yellow: '#ffce07',
+          green: '#00B201',
+          black: '#000000',
+          white: '#ffffff',
+        },
         dark: '#1a1a1a',
         light: '#FAFAFA',
-        accent: '#FF9F1C',
       },
       fontFamily: {
         heading: ['Playfair Display', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
       },
     },
   },

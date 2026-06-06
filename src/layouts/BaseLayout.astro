@@ -24,6 +24,13 @@ const { title, description = 'Co-Founder & Partner Director at Sticker Factory |
     <meta property="og:type" content="website" />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      // Init language from localStorage before page renders
+      (function() {
+        var lang = localStorage.getItem('site-lang') || 'vi';
+        if (lang === 'en') document.documentElement.classList.add('lang-en');
+      })();
+    </script>
   </head>
   <body>
     <Navigation />

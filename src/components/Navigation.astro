@@ -1,39 +1,64 @@
 ---
 const navLinks = [
-  { href: '/', label: 'Trang chủ' },
-  { href: '/about', label: 'Giới thiệu' },
-  { href: '/experience', label: 'Kinh nghiệm' },
-  { href: '/services', label: 'Dịch vụ' },
-  { href: '/contact', label: 'Liên hệ' },
+  { href: '/', label: 'Trang chủ', labelEn: 'Home' },
+  { href: '/about', label: 'Giới thiệu', labelEn: 'About' },
+  { href: '/experience', label: 'Kinh nghiệm', labelEn: 'Experience' },
+  { href: '/services', label: 'Dịch vụ', labelEn: 'Services' },
+  { href: '/contact', label: 'Liên hệ', labelEn: 'Contact' },
 ];
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="/" class="font-heading text-xl font-bold text-dark hover:text-primary transition-colors">
-      NTT
+<nav class="fixed top-0 left-0 right-0 z-50 bg-brand-white border-b-2 border-brand-red shadow-sm">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-brand-red rounded-full flex items-center justify-center">
+        <span class="text-brand-white font-bold text-sm font-heading">SF</span>
+      </div>
+      <span class="font-heading font-bold text-lg text-brand-black hidden sm:block">Sticker Factory</span>
     </a>
-    <ul class="hidden md:flex items-center gap-8">
-      {navLinks.map(link => (
-        <li>
-          <a href={link.href} class="text-sm font-medium text-dark hover:text-primary transition-colors">
-            {link.label}
-          </a>
-        </li>
-      ))}
-    </ul>
-    <button id="mobile-menu-btn" class="md:hidden p-2 text-dark">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-8">
+      <ul class="flex items-center gap-6">
+        {navLinks.map(link => (
+          <li>
+            <a href={link.href} class="text-sm font-medium text-brand-black hover:text-brand-red transition-colors">
+              <span data-lang="vi">{link.label}</span>
+              <span data-lang="en">{link.labelEn}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <!-- Language toggle -->
+      <button id="lang-toggle" class="lang-toggle text-xs font-bold px-3 py-1.5 rounded">
+        <span data-lang="vi">EN</span>
+        <span data-lang="en">VI</span>
+      </button>
+    </div>
+
+    <!-- Mobile: hamburger + lang toggle -->
+    <div class="flex items-center gap-3 md:hidden">
+      <button id="lang-toggle-mobile" class="lang-toggle text-xs font-bold px-2 py-1 rounded">
+        <span data-lang="vi">EN</span>
+        <span data-lang="en">VI</span>
+      </button>
+      <button id="mobile-menu-btn" class="p-2 text-brand-black">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-brand-white border-t border-gray-100">
     <ul class="px-6 py-4 space-y-3">
       {navLinks.map(link => (
         <li>
-          <a href={link.href} class="block text-sm font-medium text-dark hover:text-primary transition-colors py-2">
-            {link.label}
+          <a href={link.href} class="block text-sm font-medium text-brand-black hover:text-brand-red transition-colors py-2">
+            <span data-lang="vi">{link.label}</span>
+            <span data-lang="en">{link.labelEn}</span>
           </a>
         </li>
       ))}
@@ -42,6 +67,14 @@ const navLinks = [
 </nav>
 
 <script>
+  function toggleLang() {
+    const isEn = document.documentElement.classList.toggle('lang-en');
+    localStorage.setItem('site-lang', isEn ? 'en' : 'vi');
+  }
+
+  document.getElementById('lang-toggle')?.addEventListener('click', toggleLang);
+  document.getElementById('lang-toggle-mobile')?.addEventListener('click', toggleLang);
+
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
   btn?.addEventListener('click', () => {
