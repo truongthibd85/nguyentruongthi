@@ -154,12 +154,17 @@ html.lang-en [data-lang="en"] { display: inline; }
   }
 
   .fab-menu {
-    @apply fixed bottom-6 right-6 z-50 flex flex-col gap-3;
+    @apply fixed bottom-6 left-6 z-50;
   }
 
   .fab-menu-item {
-    @apply flex items-center gap-3 bg-white text-on-surface px-5 py-3 rounded-full shadow-lg
+    @apply flex items-center gap-3 bg-white text-on-surface px-4 py-3 rounded-xl shadow-lg
            hover:bg-surface-container transition-all duration-300 border border-border-muted;
+    @apply mb-2;
+  }
+
+  .fab-toggle-row {
+    @apply flex flex-col items-end gap-2;
   }
 
   /* Nav active link */
