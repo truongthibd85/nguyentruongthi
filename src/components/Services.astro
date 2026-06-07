@@ -3,71 +3,73 @@ const services = [
   {
     title: 'In Sticker theo yêu cầu',
     titleEn: 'Custom Sticker Printing',
-    icon: '🏷️',
+    icon: 'inventory_2',
     description: 'Decal sticker, die-cut sticker, kiss-cut sticker, sheet sticker, clear sticker, reflective sticker, transfer sticker, tem bảo hành và sticker giấy.',
     descriptionEn: 'Decal stickers, die-cut, kiss-cut, sheet stickers, clear, reflective, transfer stickers, warranty labels and paper stickers.',
     features: ['Decal Sticker', 'Die-cut & Kiss-cut', 'Sheet Stickers', 'Clear & Reflective', 'Transfer Sticker'],
+    color: 'primary',
   },
   {
     title: 'Giải pháp in ấn B2B',
     titleEn: 'B2B Brand Printing Solutions',
-    icon: '🏢',
+    icon: 'business_center',
     description: 'Tem nhãn, bao bì, sticker sản phẩm, sản phẩm nhận diện thương hiệu, quà tặng quảng cáo và hỗ trợ in ấn cho SME và doanh nghiệp.',
     descriptionEn: 'Labels, packaging, product stickers, brand merchandise, promotional gifts and printing support for SMEs and businesses.',
     features: ['Labels', 'Packaging', 'Brand Merchandise', 'Promotional Gifts', 'Custom Printing'],
+    color: 'success',
   },
   {
     title: 'Phát triển sản phẩm sáng tạo',
     titleEn: 'Creative Product Development',
-    icon: '💡',
+    icon: 'lightbulb',
     description: 'Hỗ trợ thương hiệu từ ý tưởng, định hướng thiết kế, tư vấn vật liệu, làm mẫu, in ấn đến sản xuất hoàn thiện.',
     descriptionEn: 'Supporting brands from ideation, design direction, material consulting, prototyping, printing to full production.',
     features: ['Tư vấn ý tưởng', 'Design Direction', 'Material Consulting', 'Sample Development', 'Full Production'],
+    color: 'tertiary',
   },
   {
     title: 'Sản phẩm Sticker bán lẻ & cộng đồng',
     titleEn: 'Retail & Community Sticker Products',
-    icon: '🎨',
+    icon: 'palette',
     description: 'Bộ sưu tập sticker, sticker lifestyle, sticker trang trí và sản phẩm sáng tạo theo phong cách DIY.',
     descriptionEn: 'Sticker collections, lifestyle stickers, decorative stickers and creative DIY-style products.',
     features: ['Sticker Collections', 'Lifestyle Stickers', 'Decorative Stickers', 'DIY Products', 'Community Products'],
+    color: 'secondary',
   },
 ];
 ---
 
-<section class="section-padding bg-surface">
-  <div class="max-w-7xl mx-auto px-6 lg:px-16">
-    <!-- Section label -->
-    <div class="text-center mb-4">
-      <span class="section-label">
+<section id="services" class="py-16 lg:py-24 bg-background relative">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <span class="section-label reveal">Dịch vụ</span>
+      <h2 class="section-title reveal mt-2">
         <span data-lang="vi">Dịch vụ của chúng tôi</span>
         <span data-lang="en">Our Services</span>
-      </span>
-    </div>
-
-    <div class="text-center mb-12">
-      <h2 class="section-title">
-        <span data-lang="vi">Dịch vụ</span>
-        <span data-lang="en">Services</span>
       </h2>
-      <p class="font-body text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+      <p class="reveal font-body text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-4">
         <span data-lang="vi">Giải pháp in ấn theo yêu cầu cho cá nhân, local brand, SME và khách hàng B2B</span>
         <span data-lang="en">Custom printing solutions for individuals, local brands, SMEs and B2B clients</span>
       </p>
     </div>
 
-    <!-- Services grid -->
     <div class="grid md:grid-cols-2 gap-6">
-      {services.map(service => (
-        <div class="card-stitch hover-lift group">
+      {services.map((service, index) => (
+        <div class="reveal service-card group" style={`animation-delay: ${index * 0.1}s`}>
           <div class="flex items-start gap-4 mb-4">
-            <span class="text-3xl">{service.icon}</span>
+            <div class={`w-14 h-14 rounded-xl flex items-center justify-center shadow-md ${
+              service.color === 'primary' ? 'bg-primary' :
+              service.color === 'success' ? 'bg-success' :
+              service.color === 'tertiary' ? 'bg-tertiary' : 'bg-secondary'
+            }`}>
+              <span class="material-symbols-outlined text-white text-2xl">{service.icon}</span>
+            </div>
             <div class="flex-1">
-              <h3 class="font-heading text-headline-md text-on-background mb-1">
+              <h3 class="font-heading font-bold text-xl text-on-surface mb-1">
                 <span data-lang="vi">{service.title}</span>
                 <span data-lang="en">{service.titleEn}</span>
               </h3>
-              <span class="font-label text-label-md text-primary">
+              <span class="font-body text-sm text-on-surface-variant">
                 <span data-lang="vi">{service.titleEn}</span>
                 <span data-lang="en">{service.title}</span>
               </span>
@@ -86,18 +88,11 @@ const services = [
       ))}
     </div>
 
-    <!-- CTA -->
-    <div class="mt-12 text-center">
-      <p class="font-body text-body-md text-on-surface-variant mb-6">
-        <span data-lang="vi">Bạn cần tư vấn về giải pháp in ấn cho thương hiệu của mình?</span>
-        <span data-lang="en">Need printing solutions for your brand?</span>
-      </p>
-      <a href="/contact" class="btn-primary">
+    <div class="reveal mt-12 text-center">
+      <a href="#contact" class="btn-primary inline-flex items-center gap-2">
+        <span class="material-symbols-outlined">mail</span>
         <span data-lang="vi">Liên hệ tư vấn ngay</span>
         <span data-lang="en">Contact for Consultation</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
       </a>
     </div>
   </div>

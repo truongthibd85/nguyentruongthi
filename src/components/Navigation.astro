@@ -1,47 +1,48 @@
 ---
 const navLinks = [
-  { href: '/', label: 'Trang chủ', labelEn: 'Home' },
-  { href: '/about', label: 'Giới thiệu', labelEn: 'About' },
-  { href: '/experience', label: 'Kinh nghiệm', labelEn: 'Experience' },
-  { href: '/services', label: 'Dịch vụ', labelEn: 'Services' },
-  { href: '/contact', label: 'Liên hệ', labelEn: 'Contact' },
+  { href: '#home', label: 'Trang chủ', labelEn: 'Home' },
+  { href: '#about', label: 'Giới thiệu', labelEn: 'About' },
+  { href: '#journey', label: 'Hành trình', labelEn: 'Journey' },
+  { href: '#services', label: 'Dịch vụ', labelEn: 'Services' },
+  { href: '#contact', label: 'Liên hệ', labelEn: 'Contact' },
 ];
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-surface border-b-2 border-on-background">
-  <div class="max-w-7xl mx-auto px-6 lg:px-16 py-3 flex items-center justify-between">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border-muted shadow-sm">
+  <div class="container-custom py-3 flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-3 group">
-      <div class="w-10 h-10 bg-primary rounded-sm flex items-center justify-center shadow-card group-hover:shadow-card-hover group-active:scale-95 transition-all duration-200">
-        <span class="text-on-primary font-heading font-bold text-sm">SF</span>
+    <a href="#home" class="flex items-center gap-2 group">
+      <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+        <span class="text-white font-heading font-bold text-sm">SF</span>
       </div>
-      <div class="hidden sm:block">
-        <span class="font-heading font-bold text-lg text-on-background">Sticker Factory</span>
-      </div>
+      <span class="hidden sm:block font-heading font-bold text-lg text-on-surface">Sticker Factory</span>
     </a>
 
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-1">
       {navLinks.map(link => (
-        <a href={link.href} class="px-4 py-2 text-label-md font-label text-on-surface-variant hover:text-primary hover:bg-surface-variant rounded-sm transition-colors duration-200">
+        <a data-nav href={link.href}
+           class="px-4 py-2 text-sm text-on-surface-variant hover:text-primary transition-colors duration-200 rounded-lg hover:bg-surface-container">
           <span data-lang="vi">{link.label}</span>
           <span data-lang="en">{link.labelEn}</span>
         </a>
       ))}
       <!-- Language toggle -->
-      <button id="lang-toggle" class="lang-toggle ml-2 text-label-sm">
-        <span data-lang="vi">EN</span>
-        <span data-lang="en">VI</span>
-      </button>
+      <div class="flex items-center gap-1 ml-4">
+        <button id="lang-toggle" class="px-4 py-2 text-sm font-semibold rounded-full bg-primary text-white transition-all duration-200">
+          <span data-lang="vi">EN</span>
+          <span data-lang="en">VI</span>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile: hamburger + lang toggle -->
     <div class="flex items-center gap-2 md:hidden">
-      <button id="lang-toggle-mobile" class="lang-toggle text-label-sm">
+      <button id="lang-toggle-mobile" class="px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-white transition-all duration-200">
         <span data-lang="vi">EN</span>
         <span data-lang="en">VI</span>
       </button>
-      <button id="mobile-menu-btn" class="p-2 text-on-background hover:bg-surface-variant rounded-sm transition-colors">
+      <button id="mobile-menu-btn" class="p-2 text-on-surface hover:bg-surface-container rounded-lg transition-colors">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -50,10 +51,11 @@ const navLinks = [
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t-2 border-on-background">
-    <div class="px-6 py-4 space-y-1">
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-border-muted">
+    <div class="container-custom py-4 space-y-1">
       {navLinks.map(link => (
-        <a href={link.href} class="block px-4 py-3 text-label-md font-label text-on-surface-variant hover:text-primary hover:bg-surface-variant rounded-sm transition-colors">
+        <a data-nav href={link.href}
+           class="block px-4 py-3 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors">
           <span data-lang="vi">{link.label}</span>
           <span data-lang="en">{link.labelEn}</span>
         </a>
@@ -61,3 +63,26 @@ const navLinks = [
     </div>
   </div>
 </nav>
+
+<script is:inline>
+  function toggleLang() {
+    var isEn = document.documentElement.classList.toggle('lang-en');
+    localStorage.setItem('site-lang', isEn ? 'en' : 'vi');
+    // Update button styles
+    document.querySelectorAll('#lang-toggle, #lang-toggle-mobile').forEach(function(btn) {
+      if (isEn) {
+        btn.classList.remove('bg-primary', 'text-white');
+        btn.classList.add('bg-surface-container', 'text-on-surface');
+      } else {
+        btn.classList.add('bg-primary', 'text-white');
+        btn.classList.remove('bg-surface-container', 'text-on-surface');
+      }
+    });
+  }
+
+  document.getElementById('lang-toggle')?.addEventListener('click', toggleLang);
+  document.getElementById('lang-toggle-mobile')?.addEventListener('click', toggleLang);
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+</script>

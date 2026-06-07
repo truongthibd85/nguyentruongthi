@@ -1,73 +1,134 @@
 ---
 ---
 
-<section class="min-h-screen flex items-center justify-center bg-background pt-20 relative overflow-hidden">
-  <!-- Dot pattern background -->
-  <div class="absolute inset-0 bg-dot-pattern"></div>
+<section id="home" class="min-h-screen flex items-center pt-20 relative overflow-hidden bg-background">
+  <!-- Decorative pattern -->
+  <div class="absolute inset-0 pattern-dots"></div>
+  <!-- Decorative circles -->
+  <div class="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 left-10 w-48 h-48 bg-tertiary/10 rounded-full blur-3xl"></div>
 
-  <div class="max-w-7xl mx-auto px-6 lg:px-16 text-center relative z-10">
-    <!-- Badge -->
-    <div class="mb-6 inline-flex items-center gap-2">
-      <span class="font-label text-label-md text-on-surface-variant border-2 border-outline px-4 py-1.5 rounded-full">
-        Master of Sticker
-      </span>
-    </div>
+  <div class="container-custom relative z-10 py-16 lg:py-24">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Left: Content -->
+      <div class="space-y-6">
+        <!-- Badge -->
+        <div class="reveal animate-fade-in-left">
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full text-sm font-semibold text-on-surface">
+            <span class="w-2 h-2 bg-success rounded-full animate-pulse"></span>
+            <span data-lang="vi">Đang hoạt động</span>
+            <span data-lang="en">Available for work</span>
+          </span>
+        </div>
 
-    <!-- Name -->
-    <h1 class="font-heading font-bold text-display-lg md:text-display-lg-mobile text-on-background mb-4">
-      Thi Nguyễn
-      <span class="text-primary">(Leon)</span>
-    </h1>
+        <!-- Name -->
+        <h1 class="reveal animate-fade-in-left stagger-1 font-heading font-bold text-display-lg-mobile lg:text-display-lg text-on-surface leading-tight">
+          Thi Nguyễn <span class="text-primary">(Leon)</span>
+        </h1>
 
-    <!-- Title -->
-    <p class="font-body text-body-lg text-on-surface-variant mb-8 max-w-2xl mx-auto">
-      <span data-lang="vi">Đồng sáng lập & Giám đốc Đối tác tại Sticker Factory</span>
-      <span data-lang="en">Co-Founder & Partner Director at Sticker Factory</span>
-    </p>
+        <!-- Title -->
+        <p class="reveal animate-fade-in-left stagger-2 font-body text-body-lg text-on-surface-variant leading-relaxed">
+          <span data-lang="vi">Đồng sáng lập & Giám đốc Đối tác tại Sticker Factory</span>
+          <span data-lang="en">Co-Founder & Partner Director at Sticker Factory</span>
+        </p>
 
-    <!-- Tagline -->
-    <p class="font-body text-body-md text-on-surface-variant/70 mb-12 max-w-xl mx-auto">
-      <span data-lang="vi">Giải pháp sticker, tem nhãn, bao bì & in ấn theo yêu cầu cho thương hiệu của bạn</span>
-      <span data-lang="en">Custom sticker, labels, packaging & printing solutions for your brand</span>
-    </p>
+        <!-- Tagline -->
+        <p class="reveal animate-fade-in-left stagger-3 font-body text-body-md text-on-surface-variant/70">
+          <span data-lang="vi">Giải pháp sticker, tem nhãn, bao bì & in ấn theo yêu cầu cho thương hiệu của bạn</span>
+          <span data-lang="en">Custom sticker, labels, packaging & printing solutions for your brand</span>
+        </p>
 
-    <!-- CTA Buttons -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/about" class="btn-primary">
-        <span data-lang="vi">Khám phá thêm</span>
-        <span data-lang="en">Learn More</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
-      </a>
-      <a href="/contact" class="btn-outline">
-        <span data-lang="vi">Liên hệ ngay</span>
-        <span data-lang="en">Contact Me</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      </a>
-    </div>
+        <!-- CTA Buttons -->
+        <div class="reveal animate-fade-in-left stagger-4 flex flex-wrap gap-4">
+          <a href="#contact" class="btn-primary">
+            <span class="material-symbols-outlined">mail</span>
+            <span data-lang="vi">Liên hệ ngay</span>
+            <span data-lang="en">Contact Me</span>
+          </a>
+          <a href="#services" class="btn-outline">
+            <span class="material-symbols-outlined">apps</span>
+            <span data-lang="vi">Xem dịch vụ</span>
+            <span data-lang="en">View Services</span>
+          </a>
+        </div>
 
-    <!-- Social links -->
-    <div class="mt-16 flex justify-center items-center gap-6">
-      <a href="https://www.linkedin.com/in/nguyentruongthi" target="_blank" rel="noopener noreferrer"
-         class="font-label text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">LinkedIn</a>
-      <span class="w-1 h-1 bg-outline rounded-full"></span>
-      <a href="https://www.instagram.com/stickermanvn" target="_blank" rel="noopener noreferrer"
-         class="font-label text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Instagram</a>
-      <span class="w-1 h-1 bg-outline rounded-full"></span>
-      <a href="https://stickerfactory.vn" target="_blank" rel="noopener noreferrer"
-         class="font-label text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Website</a>
-    </div>
+        <!-- Quick stats -->
+        <div class="reveal animate-fade-in-left stagger-5 flex flex-wrap gap-8 pt-4">
+          {[
+            { number: '9+', label: 'Năm kinh nghiệm', labelEn: 'Years' },
+            { number: '500+', label: 'Khách hàng', labelEn: 'Clients' },
+            { number: '2020', label: 'Thành lập công ty', labelEn: 'Founded' },
+          ].map(stat => (
+            <div class="text-center">
+              <div class="font-heading font-bold text-2xl text-primary">{stat.number}</div>
+              <div class="font-body text-sm text-on-surface-variant">
+                <span data-lang="vi">{stat.label}</span>
+                <span data-lang="en">{stat.labelEn}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-    <!-- Scroll indicator -->
-    <div class="mt-12">
-      <div class="inline-flex flex-col items-center gap-2 text-on-surface-variant/50">
-        <span class="font-label text-label-sm">Scroll</span>
-        <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
+      <!-- Right: Image / Visual -->
+      <div class="reveal animate-fade-in-right relative">
+        <div class="relative">
+          <!-- Decorative elements -->
+          <div class="absolute -top-4 -right-4 w-24 h-24 bg-tertiary/20 rounded-2xl -z-10"></div>
+          <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-2xl -z-10"></div>
+
+          <!-- Main visual card -->
+          <div class="bg-white rounded-2xl p-8 shadow-xl border border-border-muted">
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Sticker card -->
+              <div class="bg-surface-container rounded-xl p-4 text-center hover-lift cursor-pointer">
+                <div class="text-4xl mb-2">🏷️</div>
+                <div class="font-body text-sm font-semibold text-on-surface">
+                  <span data-lang="vi">Sticker</span>
+                  <span data-lang="en">Sticker</span>
+                </div>
+              </div>
+              <!-- Label card -->
+              <div class="bg-surface-container rounded-xl p-4 text-center hover-lift cursor-pointer">
+                <div class="text-4xl mb-2">🏢</div>
+                <div class="font-body text-sm font-semibold text-on-surface">
+                  <span data-lang="vi">Bao bì</span>
+                  <span data-lang="en">Packaging</span>
+                </div>
+              </div>
+              <!-- Print card -->
+              <div class="bg-surface-container rounded-xl p-4 text-center hover-lift cursor-pointer">
+                <div class="text-4xl mb-2">🖨️</div>
+                <div class="font-body text-sm font-semibold text-on-surface">
+                  <span data-lang="vi">In ấn</span>
+                  <span data-lang="en">Printing</span>
+                </div>
+              </div>
+              <!-- Creative card -->
+              <div class="bg-surface-container rounded-xl p-4 text-center hover-lift cursor-pointer">
+                <div class="text-4xl mb-2">💡</div>
+                <div class="font-body text-sm font-semibold text-on-surface">
+                  <span data-lang="vi">Sáng tạo</span>
+                  <span data-lang="en">Creative</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sticker Factory brand -->
+            <div class="mt-6 flex items-center gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
+              <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-white font-heading font-bold">SF</span>
+              </div>
+              <div>
+                <div class="font-heading font-bold text-on-surface">Sticker Factory</div>
+                <div class="font-body text-sm text-on-surface-variant">
+                  <span data-lang="vi">Đồng sáng lập & Giám đốc Đối tác</span>
+                  <span data-lang="en">Co-Founder & Partner Director</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

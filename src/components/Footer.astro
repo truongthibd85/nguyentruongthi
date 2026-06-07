@@ -1,39 +1,38 @@
 ---
 const socialLinks = [
-  { href: 'https://www.instagram.com/stickermanvn', label: 'Instagram', labelEn: 'Instagram' },
-  { href: 'https://www.facebook.com/truongthivn', label: 'Facebook', labelEn: 'Facebook' },
-  { href: 'https://www.linkedin.com/in/nguyentruongthi', label: 'LinkedIn', labelEn: 'LinkedIn' },
-  { href: 'https://stickerfactory.vn', label: 'Website', labelEn: 'Website' },
+  { href: 'https://www.instagram.com/stickermanvn', label: 'Instagram', labelEn: 'Instagram', icon: 'camera' },
+  { href: 'https://www.facebook.com/truongthivn', label: 'Facebook', labelEn: 'Facebook', icon: 'public' },
+  { href: 'https://www.linkedin.com/in/nguyentruongthi', label: 'LinkedIn', labelEn: 'LinkedIn', icon: 'link' },
+  { href: 'https://stickerfactory.vn', label: 'Website', labelEn: 'Website', icon: 'language' },
 ];
 ---
 
-<footer class="bg-on-background text-surface py-12">
-  <div class="max-w-7xl mx-auto px-6 lg:px-16">
+<footer class="bg-secondary text-white py-12">
+  <div class="container-custom">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-      <!-- Logo & info -->
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 bg-primary rounded-sm flex items-center justify-center shadow-card">
-            <span class="text-on-primary font-heading font-bold text-sm">SF</span>
+          <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+            <span class="text-white font-heading font-bold text-sm">SF</span>
           </div>
-          <h3 class="font-heading font-bold text-xl text-surface">Thi Nguyễn (Leon)</h3>
+          <h3 class="font-heading font-bold text-xl">Thi Nguyễn (Leon)</h3>
         </div>
-        <p class="font-body text-body-sm text-surface/70 leading-relaxed">
+        <p class="font-body text-sm text-white/70 leading-relaxed">
           <span data-lang="vi">Co-Founder & Partner Director tại Sticker Factory<br />TP. Hồ Chí Minh, Việt Nam</span>
           <span data-lang="en">Co-Founder & Partner Director at Sticker Factory<br />Ho Chi Minh City, Vietnam</span>
         </p>
       </div>
 
-      <!-- Social links -->
       <div>
-        <h4 class="font-label text-label-lg text-surface mb-4">
+        <h4 class="font-body font-semibold text-sm uppercase tracking-wider text-white/60 mb-4">
           <span data-lang="vi">Liên kết</span>
           <span data-lang="en">Links</span>
         </h4>
         <div class="flex flex-wrap gap-3">
           {socialLinks.map(link => (
             <a href={link.href} target="_blank" rel="noopener noreferrer"
-               class="font-label text-label-md text-surface/70 hover:text-primary transition-colors duration-200 hover:underline">
+               class="flex items-center gap-2 px-3 py-2 bg-white/10 rounded-lg text-sm font-body text-white/80 hover:bg-white/20 hover:text-white transition-all duration-200">
+              <span class="material-symbols-outlined text-base">{link.icon}</span>
               <span data-lang="vi">{link.label}</span>
               <span data-lang="en">{link.labelEn}</span>
             </a>
@@ -41,23 +40,20 @@ const socialLinks = [
         </div>
       </div>
 
-      <!-- Contact -->
       <div>
-        <h4 class="font-label text-label-lg text-surface mb-4">
+        <h4 class="font-body font-semibold text-sm uppercase tracking-wider text-white/60 mb-4">
           <span data-lang="vi">Liên hệ</span>
           <span data-lang="en">Contact</span>
         </h4>
-        <p class="font-body text-body-sm text-surface/70">truongthinguyen@stickerfactory.vn</p>
-        <p class="font-body text-body-sm text-surface/70 mt-1">0989 83 74 85</p>
+        <p class="font-body text-sm text-white/70">truongthinguyen@stickerfactory.vn</p>
+        <p class="font-body text-sm text-white/70 mt-1">0989 83 74 85</p>
       </div>
     </div>
 
-    <!-- Divider -->
-    <div class="divider-stitch mb-6"></div>
+    <div class="divider bg-white/20 mb-6"></div>
 
-    <!-- Copyright -->
     <div class="text-center">
-      <p class="font-label text-label-sm text-surface/50">
+      <p class="font-body text-sm text-white/50">
         &copy; 2024 Thi Nguyễn (Leon). All rights reserved.
       </p>
     </div>
