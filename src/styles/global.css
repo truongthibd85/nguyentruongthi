@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply font-body text-brand-black bg-brand-white;
+    @apply font-body text-on-background bg-background;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -20,12 +20,15 @@
 
 /* Language toggle */
 [data-lang="en"] { display: none; }
-body.lang-en [data-lang="vi"] { display: none; }
-body.lang-en [data-lang="en"] { display: inline; }
-body.lang-en [data-lang-en-block] { display: none; }
-body.lang-en [data-lang-vi-block] { display: block; }
-[data-lang-vi-block] { display: block; }
-[data-lang-en-block] { display: none; }
+html.lang-en [data-lang="vi"] { display: none; }
+html.lang-en [data-lang="en"] { display: inline; }
+
+/* Dot pattern background */
+.bg-dot-pattern {
+  background-image: radial-gradient(circle, #926f6b 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.15;
+}
 
 @layer components {
   .section-padding {
@@ -33,35 +36,101 @@ body.lang-en [data-lang-vi-block] { display: block; }
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-8 text-brand-black font-heading;
+    @apply font-heading font-bold text-headline-lg md:text-headline-md text-on-background mb-8;
   }
 
   .btn-primary {
-    @apply inline-block px-6 py-3 bg-brand-red text-brand-white font-semibold rounded-lg
-           hover:bg-red-700 transition-colors duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-on-primary font-label text-label-md rounded-sm
+           hover:bg-red-800 transition-colors duration-200 active:scale-95;
   }
 
   .btn-outline {
-    @apply inline-block px-6 py-3 border-2 border-brand-red text-brand-red font-semibold rounded-lg
-           hover:bg-brand-red hover:text-brand-white transition-colors duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary font-label text-label-md rounded-sm
+           hover:bg-primary hover:text-on-primary transition-colors duration-200 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-primary font-label text-label-md rounded-sm
+           hover:bg-surface-variant transition-colors duration-200;
   }
 
   .lang-toggle {
-    @apply text-sm font-medium cursor-pointer px-3 py-1 rounded border border-brand-red text-brand-red
-           hover:bg-brand-red hover:text-brand-white transition-colors duration-200;
+    @apply text-sm font-medium cursor-pointer px-3 py-1.5 rounded-sm border-2 border-primary text-primary font-label
+           hover:bg-primary hover:text-on-primary transition-all duration-200 active:scale-95;
   }
 
   .lang-toggle.active {
-    @apply bg-brand-red text-brand-white;
+    @apply bg-primary text-on-primary;
+  }
+
+  /* Stitch card style */
+  .card-stitch {
+    @apply bg-surface rounded-sm p-6 md:p-8 border-2 border-on-background shadow-card transition-all duration-200;
+    box-shadow: 4px 4px 0 var(--tw-colors-on-background, #291715);
+  }
+
+  .card-stitch:hover {
+    box-shadow: 2px 2px 0 var(--tw-colors-on-background, #291715);
+    transform: translate(2px, 2px);
+  }
+
+  .card-stitch-sm {
+    @apply bg-surface rounded-sm p-4 border-2 border-on-background shadow-card-sm transition-all duration-200;
+    box-shadow: 3px 3px 0 var(--tw-colors-on-background, #291715);
+  }
+
+  .card-stitch-sm:hover {
+    box-shadow: 1px 1px 0 var(--tw-colors-on-background, #291715);
+    transform: translate(2px, 2px);
+  }
+
+  /* Section label */
+  .section-label {
+    @apply font-label text-label-sm text-on-surface-variant uppercase tracking-widest;
+  }
+
+  /* Input fields */
+  .input-stitch {
+    @apply w-full px-4 py-3 bg-surface border-2 border-on-background rounded-sm text-body-md text-on-background
+           placeholder:text-on-surface-variant focus:outline-none focus:border-primary transition-colors duration-200;
+  }
+
+  /* Tag/chip */
+  .tag-stitch {
+    @apply inline-block px-3 py-1 bg-surface-variant text-on-surface-variant font-label text-label-sm rounded-full
+           border border-outline;
+  }
+
+  /* Timeline dot */
+  .timeline-dot {
+    @apply w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-md flex-shrink-0;
+  }
+
+  /* Divider with dot */
+  .divider-stitch {
+    @apply w-full h-0.5 bg-outline;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-brand-red to-brand-yellow bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-tertiary-container bg-clip-text text-transparent;
   }
 
   .bg-brand-gradient {
-    background: linear-gradient(135deg, #e42327 0%, #ffce07 100%);
+    background: linear-gradient(135deg, #bd0014 0%, #ffce07 100%);
+  }
+
+  .border-stitch {
+    @apply border-2 border-on-background;
+  }
+
+  /* Animation */
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .hover-lift:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #291715;
   }
 }

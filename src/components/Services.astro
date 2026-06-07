@@ -35,54 +35,69 @@ const services = [
 ];
 ---
 
-<section class="section-padding bg-brand-white">
-  <div class="max-w-6xl mx-auto">
+<section class="section-padding bg-surface">
+  <div class="max-w-7xl mx-auto px-6 lg:px-16">
+    <!-- Section label -->
+    <div class="text-center mb-4">
+      <span class="section-label">
+        <span data-lang="vi">Dịch vụ của chúng tôi</span>
+        <span data-lang="en">Our Services</span>
+      </span>
+    </div>
+
     <div class="text-center mb-12">
       <h2 class="section-title">
         <span data-lang="vi">Dịch vụ</span>
         <span data-lang="en">Services</span>
       </h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">
+      <p class="font-body text-body-lg text-on-surface-variant max-w-2xl mx-auto">
         <span data-lang="vi">Giải pháp in ấn theo yêu cầu cho cá nhân, local brand, SME và khách hàng B2B</span>
         <span data-lang="en">Custom printing solutions for individuals, local brands, SMEs and B2B clients</span>
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
+    <!-- Services grid -->
+    <div class="grid md:grid-cols-2 gap-6">
       {services.map(service => (
-        <div class="group bg-brand-white border-2 border-brand-red/20 rounded-2xl p-8 hover:border-brand-red/60 hover:shadow-xl transition-all duration-300">
-          <div class="text-4xl mb-4">{service.icon}</div>
-          <h3 class="font-heading text-2xl font-bold text-brand-black mb-1">
-            <span data-lang="vi">{service.title}</span>
-            <span data-lang="en">{service.titleEn}</span>
-          </h3>
-          <p class="text-brand-red text-sm font-medium mb-4">
-            <span data-lang="vi">{service.titleEn}</span>
-            <span data-lang="en">{service.title}</span>
-          </p>
-          <p class="text-gray-600 text-sm leading-relaxed mb-6 font-body">
+        <div class="card-stitch hover-lift group">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="text-3xl">{service.icon}</span>
+            <div class="flex-1">
+              <h3 class="font-heading text-headline-md text-on-background mb-1">
+                <span data-lang="vi">{service.title}</span>
+                <span data-lang="en">{service.titleEn}</span>
+              </h3>
+              <span class="font-label text-label-md text-primary">
+                <span data-lang="vi">{service.titleEn}</span>
+                <span data-lang="en">{service.title}</span>
+              </span>
+            </div>
+          </div>
+          <p class="font-body text-body-md text-on-surface-variant mb-6 leading-relaxed">
             <span data-lang="vi">{service.description}</span>
             <span data-lang="en">{service.descriptionEn}</span>
           </p>
           <div class="flex flex-wrap gap-2">
             {service.features.map(feature => (
-              <span class="px-3 py-1 bg-brand-red/5 text-brand-red text-xs font-medium rounded-full font-body">
-                {feature}
-              </span>
+              <span class="tag-stitch">{feature}</span>
             ))}
           </div>
         </div>
       ))}
     </div>
 
+    <!-- CTA -->
     <div class="mt-12 text-center">
-      <p class="text-gray-600 mb-6">
+      <p class="font-body text-body-md text-on-surface-variant mb-6">
         <span data-lang="vi">Bạn cần tư vấn về giải pháp in ấn cho thương hiệu của mình?</span>
         <span data-lang="en">Need printing solutions for your brand?</span>
       </p>
       <a href="/contact" class="btn-primary">
         <span data-lang="vi">Liên hệ tư vấn ngay</span>
         <span data-lang="en">Contact for Consultation</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
       </a>
     </div>
   </div>

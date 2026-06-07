@@ -7,47 +7,57 @@ const socialLinks = [
 ];
 ---
 
-<footer class="bg-brand-black text-brand-white py-12">
-  <div class="max-w-6xl mx-auto px-6">
+<footer class="bg-on-background text-surface py-12">
+  <div class="max-w-7xl mx-auto px-6 lg:px-16">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Logo & info -->
       <div>
-        <div class="flex items-center gap-2 mb-4">
-          <div class="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center">
-            <span class="text-brand-white font-bold text-xs font-heading">SF</span>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-primary rounded-sm flex items-center justify-center shadow-card">
+            <span class="text-on-primary font-heading font-bold text-sm">SF</span>
           </div>
-          <h3 class="font-heading text-xl font-bold">Thi Nguyễn (Leon)</h3>
+          <h3 class="font-heading font-bold text-xl text-surface">Thi Nguyễn (Leon)</h3>
         </div>
-        <p class="text-gray-400 text-sm leading-relaxed font-body">
+        <p class="font-body text-body-sm text-surface/70 leading-relaxed">
           <span data-lang="vi">Co-Founder & Partner Director tại Sticker Factory<br />TP. Hồ Chí Minh, Việt Nam</span>
           <span data-lang="en">Co-Founder & Partner Director at Sticker Factory<br />Ho Chi Minh City, Vietnam</span>
         </p>
       </div>
+
+      <!-- Social links -->
       <div>
-        <h4 class="font-semibold mb-4 font-body">
+        <h4 class="font-label text-label-lg text-surface mb-4">
           <span data-lang="vi">Liên kết</span>
           <span data-lang="en">Links</span>
         </h4>
-        <div class="flex gap-4">
+        <div class="flex flex-wrap gap-3">
           {socialLinks.map(link => (
             <a href={link.href} target="_blank" rel="noopener noreferrer"
-               class="text-gray-400 hover:text-brand-red transition-colors text-sm font-body">
+               class="font-label text-label-md text-surface/70 hover:text-primary transition-colors duration-200 hover:underline">
               <span data-lang="vi">{link.label}</span>
               <span data-lang="en">{link.labelEn}</span>
             </a>
           ))}
         </div>
       </div>
+
+      <!-- Contact -->
       <div>
-        <h4 class="font-semibold mb-4 font-body">
+        <h4 class="font-label text-label-lg text-surface mb-4">
           <span data-lang="vi">Liên hệ</span>
           <span data-lang="en">Contact</span>
         </h4>
-        <p class="text-gray-400 text-sm font-body">truongthinguyen@stickerfactory.vn</p>
-        <p class="text-gray-400 text-sm font-body">0989 83 74 85</p>
+        <p class="font-body text-body-sm text-surface/70">truongthinguyen@stickerfactory.vn</p>
+        <p class="font-body text-body-sm text-surface/70 mt-1">0989 83 74 85</p>
       </div>
     </div>
-    <div class="border-t border-gray-700 pt-8 text-center">
-      <p class="text-gray-500 text-sm font-body">
+
+    <!-- Divider -->
+    <div class="divider-stitch mb-6"></div>
+
+    <!-- Copyright -->
+    <div class="text-center">
+      <p class="font-label text-label-sm text-surface/50">
         &copy; 2024 Thi Nguyễn (Leon). All rights reserved.
       </p>
     </div>

@@ -31,6 +31,15 @@ const { title, description = 'Co-Founder & Partner Director at Sticker Factory |
         if (lang === 'en') document.documentElement.classList.add('lang-en');
       })();
     </script>
+    <script is:inline>
+      // Language toggle
+      function toggleLang() {
+        var isEn = document.documentElement.classList.toggle('lang-en');
+        localStorage.setItem('site-lang', isEn ? 'en' : 'vi');
+      }
+      document.getElementById('lang-toggle')?.addEventListener('click', toggleLang);
+      document.getElementById('lang-toggle-mobile')?.addEventListener('click', toggleLang);
+    </script>
   </head>
   <body>
     <Navigation />
