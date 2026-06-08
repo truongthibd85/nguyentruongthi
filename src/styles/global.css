@@ -154,17 +154,16 @@ html.lang-en [data-lang="en"] { display: inline; }
   }
 
   .fab-menu {
-    @apply fixed bottom-6 left-6 z-50;
+    @apply fixed bottom-6 right-6 z-50;
   }
 
   .fab-menu-item {
     @apply flex items-center gap-3 bg-white text-on-surface px-4 py-3 rounded-xl shadow-lg
            hover:bg-surface-container transition-all duration-300 border border-border-muted;
-    @apply mb-2;
   }
 
   .fab-toggle-row {
-    @apply flex flex-col items-end gap-2;
+    @apply flex flex-row-reverse items-center gap-3;
   }
 
   /* Nav active link */
@@ -204,13 +203,14 @@ html.lang-en [data-lang="en"] { display: inline; }
 
 #fab-menu.active .fab-child {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .fab-child {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateX(20px);
   transition: all 0.3s ease;
+  flex-direction: row-reverse;
 }
 
 /* Gradient text */
