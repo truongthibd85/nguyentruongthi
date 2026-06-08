@@ -3,7 +3,7 @@ const services = [
   {
     title: 'In Sticker theo yêu cầu',
     titleEn: 'Custom Sticker Printing',
-    icon: 'inventory_2',
+    svg: `<svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
     description: 'Decal sticker, die-cut sticker, kiss-cut sticker, sheet sticker, clear sticker, reflective sticker, transfer sticker, tem bảo hành và sticker giấy.',
     descriptionEn: 'Decal stickers, die-cut, kiss-cut, sheet stickers, clear, reflective, transfer stickers, warranty labels and paper stickers.',
     features: ['Decal Sticker', 'Die-cut & Kiss-cut', 'Sheet Stickers', 'Clear & Reflective', 'Transfer Sticker'],
@@ -12,7 +12,7 @@ const services = [
   {
     title: 'Giải pháp in ấn B2B',
     titleEn: 'B2B Brand Printing Solutions',
-    icon: 'business_center',
+    svg: `<svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>`,
     description: 'Tem nhãn, bao bì, sticker sản phẩm, sản phẩm nhận diện thương hiệu, quà tặng quảng cáo và hỗ trợ in ấn cho SME và doanh nghiệp.',
     descriptionEn: 'Labels, packaging, product stickers, brand merchandise, promotional gifts and printing support for SMEs and businesses.',
     features: ['Labels', 'Packaging', 'Brand Merchandise', 'Promotional Gifts', 'Custom Printing'],
@@ -21,7 +21,7 @@ const services = [
   {
     title: 'Phát triển sản phẩm sáng tạo',
     titleEn: 'Creative Product Development',
-    icon: 'lightbulb',
+    svg: `<svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0018 8 6 6 0 006 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 018.91 14"/></svg>`,
     description: 'Hỗ trợ thương hiệu từ ý tưởng, định hướng thiết kế, tư vấn vật liệu, làm mẫu, in ấn đến sản xuất hoàn thiện.',
     descriptionEn: 'Supporting brands from ideation, design direction, material consulting, prototyping, printing to full production.',
     features: ['Tư vấn ý tưởng', 'Design Direction', 'Material Consulting', 'Sample Development', 'Full Production'],
@@ -30,7 +30,7 @@ const services = [
   {
     title: 'Sản phẩm Sticker bán lẻ & cộng đồng',
     titleEn: 'Retail & Community Sticker Products',
-    icon: 'palette',
+    svg: `<svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>`,
     description: 'Bộ sưu tập sticker, sticker lifestyle, sticker trang trí và sản phẩm sáng tạo theo phong cách DIY.',
     descriptionEn: 'Sticker collections, lifestyle stickers, decorative stickers and creative DIY-style products.',
     features: ['Sticker Collections', 'Lifestyle Stickers', 'Decorative Stickers', 'DIY Products', 'Community Products'],
@@ -62,7 +62,7 @@ const services = [
               service.color === 'success' ? 'bg-success' :
               service.color === 'tertiary' ? 'bg-tertiary' : 'bg-secondary'
             }`}>
-              <span class="material-symbols-outlined text-white text-2xl">{service.icon}</span>
+              <Fragment set:html={service.svg} />
             </div>
             <div class="flex-1">
               <h3 class="font-heading font-bold text-xl text-on-surface mb-1">
@@ -90,7 +90,7 @@ const services = [
 
     <div class="reveal mt-12 text-center">
       <a href="#contact" class="btn-primary inline-flex items-center gap-2">
-        <span class="material-symbols-outlined">mail</span>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
         <span data-lang="vi">Liên hệ tư vấn ngay</span>
         <span data-lang="en">Contact for Consultation</span>
       </a>

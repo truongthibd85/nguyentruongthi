@@ -135,7 +135,7 @@ const productOptions = [
             </label>
             <div class="border-2 border-dashed border-border-muted rounded-xl p-6 text-center hover:border-primary hover:bg-surface-container transition-all cursor-pointer" id="drop-zone">
               <input type="file" id="file-input" name="image" accept="image/*" class="hidden" />
-              <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2">cloud_upload</span>
+              <svg class="w-10 h-10 text-on-surface-variant mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
               <p class="font-body text-sm text-on-surface-variant">
                 <span data-lang="vi">Kéo thả hoặc click để chọn hình (tối đa 5MB)</span>
                 <span data-lang="en">Drag & drop or click to select (max 5MB)</span>
@@ -146,7 +146,7 @@ const productOptions = [
           </div>
           <button type="submit" id="submit-btn" class="btn-primary w-full">
             <span id="btn-text" class="flex items-center gap-2">
-              <span class="material-symbols-outlined">send</span>
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               <span data-lang="vi">Gửi tin nhắn</span>
               <span data-lang="en">Send Message</span>
             </span>
@@ -249,7 +249,7 @@ const productOptions = [
     formSuccess.classList.add('hidden');
     formError.classList.add('hidden');
     submitBtn.disabled = true;
-    btnText.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span><span data-lang="vi">Đang gửi...</span><span data-lang="en">Sending...</span>';
+    btnText.innerHTML = '<svg class="w-5 h-5 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg><span data-lang="vi">Đang gửi...</span><span data-lang="en">Sending...</span>';
     btnSpinner.classList.remove('hidden');
 
     try {
@@ -271,7 +271,7 @@ const productOptions = [
       formError.classList.remove('hidden');
     } finally {
       submitBtn.disabled = false;
-      btnText.innerHTML = '<span class="material-symbols-outlined">send</span><span data-lang="vi">Gửi tin nhắn</span><span data-lang="en">Send Message</span>';
+      btnText.innerHTML = '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg><span data-lang="vi">Gửi tin nhắn</span><span data-lang="en">Send Message</span>';
       btnSpinner.classList.add('hidden');
     }
   });

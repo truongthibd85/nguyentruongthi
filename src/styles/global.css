@@ -200,6 +200,7 @@ html.lang-en [data-lang="en"] { display: inline; }
 #fab-menu.active .fab-icon-open { display: none; }
 #fab-menu.active .fab-icon-close { display: block; }
 #fab-menu .fab-icon-close { display: none; }
+.fab-icon-open, .fab-icon-close { width: 24px; height: 24px; }
 
 #fab-menu.active .fab-child {
   opacity: 1;
