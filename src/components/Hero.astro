@@ -13,12 +13,29 @@
       <!-- Left: Content -->
       <div class="space-y-4">
         <!-- Badge -->
-        <div class="reveal animate-fade-in-left">
-          <span class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full text-sm font-semibold text-on-surface">
+        <div class="reveal animate-fade-in-left relative">
+          <button
+            id="qr-trigger"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full text-sm font-semibold text-on-surface cursor-pointer"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="QR Code"
+          >
             <span class="w-2 h-2 bg-success rounded-full animate-pulse"></span>
-            <span data-lang="vi">Đang hoạt động</span>
-            <span data-lang="en">Available for work</span>
-          </span>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/8772/8772090.png"
+              alt="QR Code"
+              class="w-4 h-4"
+              loading="lazy"
+            />
+          </button>
+          <div
+            id="qr-dropdown"
+            class="hidden absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl shadow-xl p-4 z-50 flex flex-col items-center gap-2"
+          >
+            <canvas id="qr-canvas" width="200" height="200"></canvas>
+            <span class="text-xs text-gray-500 font-body">stickerfactory.vn</span>
+          </div>
         </div>
 
         <!-- Name -->
@@ -94,3 +111,45 @@
     </div>
   </div>
 </section>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+<script is:inline>
+  (function () {
+    var trigger = document.getElementById('qr-trigger');
+    var dropdown = document.getElementById('qr-dropdown');
+    var canvas = document.getElementById('qr-canvas');
+
+    if (!trigger || !dropdown || !canvas) return;
+
+    // Generate QR code once
+    QRCode.toCanvas(canvas, 'https://stickerfactory.vn', {
+      width: 200,
+      margin: 2,
+      color: { dark: '#1a1a2e', light: '#ffffff' }
+    });
+
+    // Toggle dropdown
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = !dropdown.classList.contains('hidden');
+      dropdown.classList.toggle('hidden');
+      trigger.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (!dropdown.classList.contains('hidden') && !dropdown.contains(e.target) && e.target !== trigger) {
+        dropdown.classList.add('hidden');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !dropdown.classList.contains('hidden')) {
+        dropdown.classList.add('hidden');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
