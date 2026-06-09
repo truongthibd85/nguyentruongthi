@@ -4,6 +4,7 @@ const navLinks = [
   { href: '#about', label: 'Giới thiệu', labelEn: 'About' },
   { href: '#journey', label: 'Hành trình', labelEn: 'Journey' },
   { href: '#services', label: 'Tôi giúp gì cho bạn?', labelEn: 'My Expertise' },
+  { href: 'https://tuyendung.stickerfactory.vn', label: 'Tuyển dụng', labelEn: 'Recruitment', external: true },
   { href: '#contact', label: 'Liên hệ', labelEn: 'Contact' },
 ];
 ---
@@ -22,7 +23,10 @@ const navLinks = [
     <div class="hidden md:flex items-center gap-1">
       {navLinks.map(link => (
         <a data-nav href={link.href}
-           class="px-4 py-2 text-sm text-on-surface-variant hover:text-primary transition-colors duration-200 rounded-lg hover:bg-surface-container">
+           class:list={["px-4 py-2 text-sm hover:text-primary transition-colors duration-200 rounded-lg hover:bg-surface-container",
+             link.external ? "text-primary font-semibold" : "text-on-surface-variant"]}
+           target={link.external ? "_blank" : undefined}
+           rel={link.external ? "noopener noreferrer" : undefined}>
           <span data-lang="vi">{link.label}</span>
           <span data-lang="en">{link.labelEn}</span>
         </a>
@@ -59,7 +63,10 @@ const navLinks = [
     <div class="container-custom py-4 space-y-1">
       {navLinks.map(link => (
         <a data-nav href={link.href}
-           class="block px-4 py-3 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors">
+           class:list={["block px-4 py-3 text-sm hover:text-primary hover:bg-surface-container rounded-lg transition-colors",
+             link.external ? "text-primary font-semibold" : "text-on-surface-variant"]}
+           target={link.external ? "_blank" : undefined}
+           rel={link.external ? "noopener noreferrer" : undefined}>
           <span data-lang="vi">{link.label}</span>
           <span data-lang="en">{link.labelEn}</span>
         </a>
