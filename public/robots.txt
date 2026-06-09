@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://truongthi.stickerfactory.vn/sitemap.xml
