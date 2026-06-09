@@ -1,0 +1,651 @@
+[
+  {
+    "id": "ceo",
+    "title": "Giám đốc điều hành (CEO)",
+    "dept": "Quản lý",
+    "type": "Toàn thời gian",
+    "location": "TP.HCM",
+    "salary": "Thỏa thuận",
+    "hot": false,
+    "desc": "Tổ chức thực hiện và đánh giá kết quả kế hoạch, phương án kinh doanh và đầu tư của công ty.",
+    "responsibilities": [
+      "Tổ chức thực hiện và đánh giá kết quả kế hoạch, phương án kinh doanh, kế hoạch đầu tư của công ty.",
+      "Quyết định các công việc hằng ngày của công ty.",
+      "Ký kết hợp đồng, giao dịch nhân danh công ty.",
+      "Tuyển dụng lao động."
+    ],
+    "requirements": [
+      "Kinh nghiệm quản lý điều hành doanh nghiệp.",
+      "Tư duy chiến lược và khả năng ra quyết định.",
+      "Kỹ năng lãnh đạo và xây dựng đội ngũ."
+    ],
+    "benefits": [
+      "Thu nhập thỏa thuận theo năng lực.",
+      "Quy chế lương thưởng, nghỉ phép, BHXH, BHYT theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "internal-accountant",
+    "title": "Kế toán nội bộ",
+    "dept": "Kế toán",
+    "type": "Toàn thời gian",
+    "location": "Quận 12, TP.HCM",
+    "salary": "8 - 12 triệu",
+    "hot": false,
+    "desc": "Lập báo cáo, tổng hợp doanh thu - chi phí, quản lý nhập xuất tồn kho và các nghiệp vụ kế toán nội bộ.",
+    "responsibilities": [
+      "Sử dụng MISA, Excel... để lập báo cáo, tổng hợp doanh thu, chi phí định kỳ.",
+      "Lập hóa đơn, chứng từ bán hàng.",
+      "Theo dõi, hạch toán, quản lý nhập xuất tồn kho.",
+      "Theo dõi và hạch toán định mức sản xuất & thực tế tiêu hao NVL.",
+      "Hạch toán chứng từ kiểm soát máy móc, CCDC, tài sản cố định.",
+      "Quản lý thu chi, tạm ứng, hoàn ứng, thanh toán, công nợ.",
+      "Làm hợp đồng lao động & theo dõi BHXH, BHYT, BHTN, chấm công, bảng lương.",
+      "Phối hợp kế toán dịch vụ để làm báo cáo/quyết toán thuế."
+    ],
+    "requirements": [
+      "Cao đẳng/Đại học chuyên ngành Kế toán, Tài chính.",
+      "Có kiến thức nền tảng về kế toán, thuế. Kinh nghiệm 1-2 năm.",
+      "Ưu tiên kinh nghiệm tại doanh nghiệp sản xuất.",
+      "Tỉ mỉ, chính xác, nhanh nhẹn, quản lý thời gian tốt."
+    ],
+    "benefits": [
+      "Lương từ 8 - 12 triệu (trao đổi khi phỏng vấn).",
+      "Quy chế lương thưởng, nghỉ phép, BHXH, BHYT theo Luật lao động.",
+      "Công ty có teabreak, teambuilding.",
+      "Trang bị máy tính, thiết bị làm việc."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "senior-accountant",
+    "title": "Kế toán tổng hợp",
+    "dept": "Kế toán",
+    "type": "Toàn thời gian",
+    "location": "TP.HCM",
+    "salary": "15 - 17 triệu",
+    "hot": true,
+    "desc": "Tổng hợp, kiểm tra, đối chiếu và hạch toán các nghiệp vụ kế toán; lập báo cáo tài chính nội bộ.",
+    "responsibilities": [
+      "Tổng hợp, kiểm tra, đối chiếu, hạch toán nghiệp vụ kế toán phát sinh hàng ngày.",
+      "Theo dõi doanh thu, chi phí, công nợ, tạm ứng - hoàn ứng và dòng tiền nội bộ.",
+      "Quản lý hàng tồn kho, định mức vật tư, chi phí sản xuất, tính giá thành.",
+      "Quản lý tài sản cố định, CCDC, lập bảng phân bổ khấu hao.",
+      "Lập và phát hành hóa đơn GTGT, kiểm tra chứng từ đầu ra - đầu vào.",
+      "Chấm công, tính lương và các khoản trích theo lương.",
+      "Lập báo cáo tài chính nội bộ hàng tháng/quý.",
+      "Phối hợp thực hiện báo cáo, quyết toán thuế TNDN, TNCN, VAT."
+    ],
+    "requirements": [
+      "Tốt nghiệp Kế toán / Kiểm toán / Tài chính.",
+      "Kinh nghiệm tối thiểu 2-3 năm ở vị trí tương đương.",
+      "Hiểu biết chuẩn mực kế toán Việt Nam (VAS) và quy định thuế.",
+      "Thành thạo MISA (ưu tiên MISA ASP) và Excel nâng cao.",
+      "Ưu tiên kinh nghiệm trong sản xuất / in ấn / bao bì / thủ công mỹ nghệ."
+    ],
+    "benefits": [
+      "Lương từ 15 - 17 triệu (trao đổi khi phỏng vấn).",
+      "Quy chế lương thưởng, nghỉ phép, BHXH, BHYT theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "accountant-intern",
+    "title": "Thực tập sinh Kế toán",
+    "dept": "Kế toán",
+    "type": "Thực tập",
+    "location": "TP.HCM",
+    "salary": "Có phụ cấp",
+    "hot": false,
+    "desc": "Hỗ trợ nhập liệu, sắp xếp & kiểm tra chứng từ, học hỏi thực tế nghiệp vụ kế toán.",
+    "responsibilities": [
+      "Nhập liệu, sắp xếp & kiểm tra chứng từ - hóa đơn.",
+      "Hỗ trợ theo dõi thu/chi, công nợ (được hướng dẫn).",
+      "Lưu trữ hồ sơ, scan chứng từ, hỗ trợ báo cáo nội bộ."
+    ],
+    "requirements": [
+      "Biết Excel cơ bản.",
+      "Cẩn thận, chăm chỉ, ham học hỏi.",
+      "Có thể thực tập 2-3 tháng trở lên (ưu tiên đi làm sớm)."
+    ],
+    "benefits": [
+      "Có phụ cấp/lương thực tập.",
+      "Đóng dấu xác nhận + hỗ trợ báo cáo thực tập.",
+      "Được đào tạo thực tế, có cơ hội lên nhân viên chính thức."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "admin-assistant",
+    "title": "Trợ lý Hành chính",
+    "dept": "Hành chính",
+    "type": "Toàn thời gian",
+    "location": "Quận 10, TP.HCM",
+    "salary": "Thỏa thuận",
+    "hot": false,
+    "desc": "Quản lý lịch trình, văn bản, hồ sơ và hỗ trợ vận hành các hoạt động văn phòng.",
+    "responsibilities": [
+      "Quản lý lịch trình: sắp xếp cuộc họp, sự kiện, lịch công việc.",
+      "Tiếp nhận và xử lý thông tin: điện thoại, email, yêu cầu khách hàng/đối tác.",
+      "Quản lý văn bản, tài liệu, báo cáo, hợp đồng.",
+      "Hỗ trợ tài chính: theo dõi, lưu trữ hóa đơn, giấy tờ.",
+      "Quản lý và cập nhật hồ sơ nhân viên, khách hàng.",
+      "Hỗ trợ nhân sự: tuyển dụng, giấy tờ nhân viên mới.",
+      "Tiếp tân, điều phối hoạt động và vật phẩm văn phòng."
+    ],
+    "requirements": [
+      "Yêu thích sticker, làm việc đội nhóm vui vẻ, tính logic cao.",
+      "Kỹ năng giao tiếp và viết tiếng Anh tốt.",
+      "Sức khỏe tốt, nhanh nhẹn, gọn gàng, sạch sẽ.",
+      "Tự giác, đúng giờ, trách nhiệm.",
+      "Thành thạo MS Word, Excel, PowerPoint."
+    ],
+    "benefits": [
+      "Lương & thu nhập trao đổi khi phỏng vấn.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding.",
+      "Trang bị máy tính, thiết bị làm việc."
+    ],
+    "schedule": "09:00 - 18:00 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "production-manager",
+    "title": "Quản lý Sản xuất",
+    "dept": "Sản xuất",
+    "type": "Toàn thời gian",
+    "location": "Quận 10, TP.HCM",
+    "salary": "Thỏa thuận",
+    "hot": false,
+    "desc": "Quản lý vận hành máy móc in ấn & gia công sau in, xây dựng quy trình và cải tiến năng suất.",
+    "responsibilities": [
+      "Quản lý vận hành máy móc sản xuất in ấn và gia công sau in.",
+      "Xây dựng quy trình sản xuất, bảo dưỡng, sửa chữa máy móc thiết bị.",
+      "Kiểm soát nhập xuất NVL, nhân sự sản xuất, đảm bảo vận hành liên tục, tiết kiệm, đúng tiến độ giao hàng.",
+      "Đề xuất và áp dụng giải pháp cải tiến chất lượng và năng suất."
+    ],
+    "requirements": [
+      "Yêu thích sticker, làm việc đội nhóm vui vẻ.",
+      "Trung cấp nghề là lợi thế (không bắt buộc).",
+      "Tự giác, đúng giờ, thao tác gọn nhanh, tính thực hành cao.",
+      "Thành thạo MS Word, Excel, PowerPoint, AI..."
+    ],
+    "benefits": [
+      "Lương & thu nhập trao đổi khi phỏng vấn.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "09:00 - 18:00 từ T2 - T7, tăng ca khi có yêu cầu"
+  },
+  {
+    "id": "production-operation",
+    "title": "Nhân viên Sản xuất",
+    "dept": "Sản xuất",
+    "type": "Toàn thời gian",
+    "location": "Quận 12, TP.HCM",
+    "salary": "5 - 8 triệu",
+    "hot": false,
+    "desc": "Vận hành máy móc in ấn & gia công sau in, bảo dưỡng thiết bị và quản lý nguyên vật liệu.",
+    "responsibilities": [
+      "Vận hành máy móc sản xuất in ấn và gia công sau in.",
+      "Ghi chép, làm hướng dẫn sử dụng máy móc, tác nghiệp sản xuất.",
+      "Bảo dưỡng thiết bị đúng thời hạn, phòng ngừa gián đoạn sản xuất.",
+      "Ghi nhận, báo cáo và khắc phục lỗi sản xuất.",
+      "Quản lý NVL, hàng tồn kho, sản xuất dở dang gọn gàng, có nhãn theo dõi."
+    ],
+    "requirements": [
+      "Yêu thích sticker, làm việc đội nhóm vui vẻ.",
+      "Trung cấp nghề là lợi thế (không bắt buộc).",
+      "Tự giác, đúng giờ, thao tác gọn nhanh.",
+      "Thành thạo MS Word, Excel, PowerPoint, AI..."
+    ],
+    "benefits": [
+      "Lương cơ bản 5 - 8 triệu.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7, tăng ca khi có yêu cầu"
+  },
+  {
+    "id": "production-intern",
+    "title": "Thực tập sinh Vận hành Sản xuất",
+    "dept": "Sản xuất",
+    "type": "Thực tập",
+    "location": "Quận 10, TP.HCM",
+    "salary": "Từ 3 triệu",
+    "hot": false,
+    "desc": "Thực tập thao tác thủ công và vận hành máy móc, hỗ trợ in ấn, gia công và đóng gói.",
+    "responsibilities": [
+      "Thao tác thủ công và vận hành máy móc.",
+      "Hỗ trợ chuyên viên sản xuất chính in ấn, gia công.",
+      "Hỗ trợ đóng gói, thành phẩm khi được giao.",
+      "Vệ sinh, bảo dưỡng máy móc.",
+      "Sắp xếp, luân chuyển NVL, hàng tồn kho."
+    ],
+    "requirements": [
+      "Sinh viên các trường kỹ thuật.",
+      "Sức khỏe tốt.",
+      "Tự giác, đúng giờ, thao tác gọn nhanh, tính thực hành cao.",
+      "Thành thạo MS Word, Excel, PowerPoint, AI..."
+    ],
+    "benefits": [
+      "Lương thực tập từ 3.000.000đ (trao đổi khi phỏng vấn).",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "09:00 - 18:00 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "production-support",
+    "title": "Hỗ trợ Sản xuất",
+    "dept": "Sản xuất",
+    "type": "Toàn thời gian",
+    "location": "Quận 10, TP.HCM",
+    "salary": "Thỏa thuận",
+    "hot": false,
+    "desc": "Hỗ trợ in ấn, gia công (cán màng, cắt, bế, xả decal, kiểm phẩm) và quản lý kho theo chuẩn 5S.",
+    "responsibilities": [
+      "Thao tác thủ công và vận hành máy móc sản xuất in ấn, gia công sau in.",
+      "Hỗ trợ cán màng, cắt, bế, xả decal, kiểm phẩm trên chuyền và sau chuyền.",
+      "Hỗ trợ đóng gói, thành phẩm khi được giao.",
+      "Vệ sinh, bảo dưỡng thiết bị đúng quy trình.",
+      "Sắp xếp, luân chuyển NVL, hàng tồn kho, CCDC theo 5S."
+    ],
+    "requirements": [
+      "Trình độ từ 12/12 hoặc Trung cấp nghề (là lợi thế).",
+      "Yêu thích sticker, làm việc đội nhóm vui vẻ.",
+      "Thành thạo thao tác máy tính.",
+      "Tự giác, đúng giờ, thao tác gọn nhanh."
+    ],
+    "benefits": [
+      "Lương & thu nhập trao đổi khi phỏng vấn.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "09:00 - 18:00 từ T2 - T7, tăng ca khi có yêu cầu"
+  },
+  {
+    "id": "production-designer",
+    "title": "Nhân viên Thiết kế Sản xuất (Bình file - Dàn trang in)",
+    "dept": "Thiết kế",
+    "type": "Toàn thời gian",
+    "location": "Quận 10, TP.HCM",
+    "salary": "Thỏa thuận",
+    "hot": false,
+    "desc": "Xử lý file thiết kế, bình bài, dàn trang in, làm maquette/mockup và hỗ trợ team sale B2B.",
+    "responsibilities": [
+      "Xử lý file thiết kế, bình bài, dàn trang in.",
+      "Làm Maquette, Mockup.",
+      "Hỗ trợ team sale B2B các công việc thiết kế.",
+      "Vẽ lại, chỉnh sửa logo/hình ảnh cho khách đặt in theo yêu cầu.",
+      "Thiết kế thêm cho khách hàng đặt in theo yêu cầu."
+    ],
+    "requirements": [
+      "Yêu thích sticker, làm việc đội nhóm vui vẻ, đam mê thiết kế.",
+      "Khả năng phân tích, sáng tạo, logic, năng động, trách nhiệm.",
+      "Thành thạo AI, Photoshop..."
+    ],
+    "benefits": [
+      "Lương trao đổi cụ thể khi phỏng vấn theo năng lực.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "09:00 - 18:00 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "operation-staff",
+    "title": "Nhân viên Vận hành (Operation Staff)",
+    "dept": "Vận hành",
+    "type": "Toàn thời gian",
+    "location": "Quận 12, TP.HCM",
+    "salary": "6 - 8 triệu",
+    "hot": false,
+    "desc": "Đóng gói, sắp xếp hàng hóa, điều phối giao hàng, xử lý đơn online và hỗ trợ quản lý kho.",
+    "responsibilities": [
+      "Đóng gói hàng hóa, sắp xếp, trưng bày lên kệ.",
+      "Điều phối giao hàng với các đơn vị vận chuyển.",
+      "Chat và xử lý đơn hàng online, đóng gói, giao nhận.",
+      "Theo dõi tiến độ đơn hàng, đề xuất đặt hàng với sản xuất.",
+      "Phối hợp team Sales xử lý vấn đề phát sinh.",
+      "Hỗ trợ quản lý kho, kiểm tra hàng hư hỏng, lỗi, hạn sử dụng.",
+      "Tiếp nhận và điều phối Hotline."
+    ],
+    "requirements": [
+      "Độ tuổi 22 - 28.",
+      "Tốt nghiệp THPT trở lên.",
+      "Giao tiếp tốt, làm việc nhóm, thành thạo vi tính văn phòng.",
+      "Cẩn thận, sạch sẽ, đúng giờ, trung thực, trách nhiệm."
+    ],
+    "benefits": [
+      "Lương 6 - 8 triệu VNĐ/tháng, thử việc 1 tháng.",
+      "BHXH, BHYT, BHTN đầy đủ; xét tăng lương hàng năm.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "operations-support",
+    "title": "Nhân viên Hỗ trợ Vận hành",
+    "dept": "Vận hành",
+    "type": "Toàn thời gian",
+    "location": "Quận 12, TP.HCM",
+    "salary": "Từ 6 triệu",
+    "hot": false,
+    "desc": "Xử lý đơn hàng, làm việc với đơn vị vận chuyển, chăm sóc cửa hàng và kho theo tiêu chuẩn 5S.",
+    "responsibilities": [
+      "Xử lý đơn hàng: kiểm tra, soạn hàng, đóng gói, điều phối ship, theo dõi giao hàng.",
+      "Làm việc với các đơn vị vận chuyển/logistic.",
+      "Hỗ trợ bán hàng.",
+      "Chăm sóc vệ sinh, hàng hóa, POSM theo tiêu chuẩn 5S.",
+      "Sắp xếp bao bì, NVL, trưng bày sản phẩm.",
+      "Kiểm kho, kiểm tra chất lượng, nhập - xuất hàng, dán mã sản phẩm.",
+      "Đặt hàng bán lẻ, đại lý theo quy trình."
+    ],
+    "requirements": [
+      "Độ tuổi 22 - 28, có kinh nghiệm bán lẻ và vận hành.",
+      "Tốt nghiệp THPT trở lên.",
+      "Giao tiếp tốt, làm việc nhóm, thành thạo vi tính văn phòng.",
+      "Cẩn thận, ngăn nắp, đúng giờ, trung thực, trách nhiệm."
+    ],
+    "benefits": [
+      "Full-time lương cơ bản từ 6 triệu.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "seasonal-staff",
+    "title": "Nhân viên Thời vụ (Vận hành cửa hàng)",
+    "dept": "Vận hành",
+    "type": "Thời vụ",
+    "location": "Quận 10, TP.HCM",
+    "salary": "26.000đ/giờ",
+    "hot": false,
+    "desc": "Đóng gói, gia công thành phẩm, sắp xếp hàng hóa, kiểm kho và điều phối giao hàng theo ca.",
+    "responsibilities": [
+      "Đóng gói hàng hóa, gia công thành phẩm sau sản xuất.",
+      "Sắp xếp hàng hóa, trưng bày lên kệ.",
+      "Kiểm kho và đảm bảo định mức tồn kho.",
+      "Điều phối giao hàng với các đơn vị vận chuyển.",
+      "Sắp xếp theo layout: bao bì, NVL, hàng tồn kho, CCDC.",
+      "Kiểm tra hàng hư hỏng, lỗi, hạn sử dụng."
+    ],
+    "requirements": [
+      "Nam/Nữ có sức khỏe tốt.",
+      "Yêu thích sticker, làm việc đội nhóm vui vẻ.",
+      "Thao tác nhanh nhẹn, gọn gàng, sạch sẽ.",
+      "Thành thạo MS Word, Excel, PowerPoint."
+    ],
+    "benefits": [
+      "Lương theo giờ: 26.000đ/giờ.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "Theo ca 6 hoặc 8 tiếng (09:00 - 18:00 từ T2 - T7)"
+  },
+  {
+    "id": "wholesale-executive",
+    "title": "Nhân viên Kinh doanh Kênh Sỉ - Đại lý",
+    "dept": "Kinh doanh",
+    "type": "Toàn thời gian",
+    "location": "Quận 12, TP.HCM",
+    "salary": "LCB 6 triệu + hoa hồng",
+    "hot": true,
+    "desc": "Tìm kiếm, phát triển và chăm sóc khách hàng sỉ - đại lý, đạt và vượt chỉ tiêu doanh số.",
+    "responsibilities": [
+      "Tìm kiếm, phát triển và chăm sóc khách hàng sỉ - đại lý.",
+      "Đạt và vượt chỉ tiêu doanh số (KPI).",
+      "Khảo sát thị trường, tham gia hội chợ, sự kiện quảng bá thương hiệu.",
+      "Chuẩn bị tài liệu bán hàng, tư vấn và chốt đơn hàng sỉ.",
+      "Tiếp nhận và xử lý yêu cầu đặt hàng, báo giá, đảm bảo tiến độ giao - thanh toán.",
+      "Ghi nhận phản hồi - khiếu nại, đề xuất xử lý và báo cáo.",
+      "Chăm sóc điểm bán, cập nhật sản phẩm mới."
+    ],
+    "requirements": [
+      "Hướng ngoại, năng động, giao tiếp tốt, ngoại hình dễ nhìn.",
+      "Tiếng Anh giao tiếp tốt.",
+      "Thành thạo vi tính văn phòng, giải quyết vấn đề.",
+      "Có laptop cá nhân và xe máy, có thể đi công tác.",
+      "Chưa kinh nghiệm nhưng nhiệt huyết sẽ được đào tạo."
+    ],
+    "benefits": [
+      "LCB 6 triệu + hoa hồng 1.5% khách mới phát triển.",
+      "BHXH, BHYT và quyền lợi theo Bộ Luật Lao Động.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "b2b-sales",
+    "title": "Nhân viên Kinh doanh B2B",
+    "dept": "Kinh doanh",
+    "type": "Toàn thời gian",
+    "location": "Quận 12, TP.HCM",
+    "salary": "LCB 6 triệu + thưởng",
+    "hot": true,
+    "desc": "Chăm sóc khách hàng ưu tiên, tiếp nhận yêu cầu qua Fanpage/Zalo, nhập CRM và chốt sales.",
+    "responsibilities": [
+      "Chăm sóc khách hàng ưu tiên, khách hàng cũ quan trọng, chuyển nhu cầu thành đơn hàng/hợp đồng.",
+      "Tiếp nhận yêu cầu qua Fanpage, Zalo và kênh inbound; nhập CRM, chăm sóc và chốt sales.",
+      "Phát triển khách hàng mới."
+    ],
+    "requirements": [
+      "Yêu thích sticker, môi trường sáng tạo năng động, dùng nhiều công cụ online.",
+      "Thành thạo Word, Excel; biết CRM là lợi thế.",
+      "Có ngoại hình, hướng ngoại, giao tiếp tốt, làm việc nhóm hiệu quả.",
+      "Tiếng Anh giao tiếp và đọc hiểu."
+    ],
+    "benefits": [
+      "Lương cơ bản 6 triệu + thưởng doanh số 0.5% - 1.5%.",
+      "Review hiệu quả công việc 6 tháng/lần.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "retail-sales",
+    "title": "Nhân viên Bán hàng (Retail Sales)",
+    "dept": "Kinh doanh",
+    "type": "Toàn thời gian",
+    "location": "Quận 10, TP.HCM",
+    "salary": "Từ 7 triệu",
+    "hot": false,
+    "desc": "Tư vấn, bán hàng tại cửa hàng và các kênh online/đại lý, tạo trải nghiệm khách hàng xuất sắc.",
+    "responsibilities": [
+      "Chào đón, tư vấn và phục vụ yêu cầu mua hàng của khách.",
+      "Bán hàng tại cửa hàng, kênh online, kênh đại lý.",
+      "Thanh toán giao dịch, thao tác máy POS (giao ca, nộp tiền, đóng ca, giảm giá...).",
+      "Theo dõi phản hồi khách hàng để cải thiện trải nghiệm.",
+      "Xử lý đơn hàng: kiểm tra, soạn hàng, đóng gói, điều phối ship.",
+      "Chăm sóc cửa hàng, quầy kệ, trưng bày, kiểm kê tồn kho."
+    ],
+    "requirements": [
+      "Độ tuổi 22 - 28, có kinh nghiệm bán lẻ và CSKH.",
+      "Tốt nghiệp Cao đẳng hoặc Đại học.",
+      "Giao tiếp tốt, tiếng Anh tốt, thành thạo vi tính văn phòng.",
+      "Cẩn thận, ngăn nắp, quan sát tốt, trung thực, trách nhiệm."
+    ],
+    "benefits": [
+      "Full-time lương cơ bản từ 7 triệu.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "sales-assistant",
+    "title": "Trợ lý Kinh doanh (Sales Assistant)",
+    "dept": "Kinh doanh",
+    "type": "Toàn thời gian",
+    "location": "TP.HCM",
+    "salary": "Net 8 - 10 triệu",
+    "hot": true,
+    "desc": "Hỗ trợ lập báo giá, hợp đồng, chứng từ, theo dõi đơn hàng, công nợ và chăm sóc khách hàng.",
+    "responsibilities": [
+      "Hỗ trợ lập báo giá, hợp đồng, đơn hàng, chứng từ để chốt đơn và theo dõi thanh toán.",
+      "Trả lời phản hồi, chăm sóc, tư vấn và giải đáp yêu cầu khách hàng.",
+      "Theo dõi, lập và giao nhận chứng từ bán hàng.",
+      "Nắm rõ tiêu chí sản phẩm tiêu chuẩn để tư vấn và chốt đơn.",
+      "Theo dõi tiến độ đơn hàng, phối hợp sản xuất - kế toán - kho - giao hàng.",
+      "Theo dõi công nợ khách hàng.",
+      "Theo dõi mua hàng và chứng từ đầu vào với đơn gia công/sản xuất."
+    ],
+    "requirements": [
+      "Tốt nghiệp CĐ/ĐH kinh tế, quản trị hoặc tương đương.",
+      "Tin học văn phòng tốt (đặc biệt Excel/Google Sheets).",
+      "Cẩn thận, trung thực, giao tiếp và phối hợp tốt.",
+      "Có laptop cá nhân."
+    ],
+    "benefits": [
+      "Lương Net từ 8 - 10 triệu (trao đổi khi phỏng vấn).",
+      "Quy chế lương thưởng, nghỉ phép, BHXH, BHYT theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "digital-marketing",
+    "title": "Digital Marketing",
+    "dept": "Marketing",
+    "type": "Part-time / Full-time / Thực tập",
+    "location": "Quận 10, TP.HCM",
+    "salary": "30.000đ/giờ",
+    "hot": false,
+    "desc": "Listing sản phẩm website & sàn TMĐT, quản lý nội dung web/blog và tối ưu trải nghiệm người dùng.",
+    "responsibilities": [
+      "Listing sản phẩm website và sàn TMĐT Shopee, TikTok.",
+      "Làm việc với Agency developer.",
+      "Cải thiện giao diện, tốc độ web & trải nghiệm người dùng.",
+      "Thực hiện nội dung web: dàn trang, quản lý nội dung website, blog."
+    ],
+    "requirements": [
+      "Đảm bảo thời gian làm việc 3 - 5 ngày/tuần.",
+      "Sử dụng máy tính thành thạo.",
+      "Khả năng phân tích, sáng tạo, logic.",
+      "Tự giác, kỷ luật, trách nhiệm cao.",
+      "Có smartphone, laptop cá nhân đủ cấu hình."
+    ],
+    "benefits": [
+      "Lương theo giờ: 30.000đ/giờ.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "graphic-designer",
+    "title": "Nhân viên Thiết kế Đồ họa (Graphic Designer)",
+    "dept": "Thiết kế",
+    "type": "Part-time / Full-time / Thực tập",
+    "location": "Quận 10, TP.HCM",
+    "salary": "Thỏa thuận",
+    "hot": true,
+    "desc": "Thực hiện các công việc thiết kế sáng tạo với phong cách hiện đại, bắt kịp xu hướng trendy.",
+    "responsibilities": [
+      "Làm các công việc liên quan đến thiết kế sáng tạo.",
+      "Trao đổi cụ thể khi phỏng vấn theo chuyên môn và năng lực."
+    ],
+    "requirements": [
+      "Yêu thích sticker, đam mê thiết kế.",
+      "Thành thạo AI, Photoshop...",
+      "Phong cách thiết kế hiện đại, thẩm mỹ tốt.",
+      "Cập nhật xu hướng thiết kế và trend của Việt Nam và thế giới.",
+      "Khả năng phân tích, sáng tạo, logic; tự giác, trách nhiệm cao."
+    ],
+    "benefits": [
+      "Lương trao đổi cụ thể khi phỏng vấn theo năng lực.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "09:00 - 18:00 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "content-creator",
+    "title": "Nhân viên Sáng tạo Nội dung (Content Creator)",
+    "dept": "Marketing",
+    "type": "Part-time / Full-time / Thực tập",
+    "location": "Quận 10, TP.HCM",
+    "salary": "Thỏa thuận",
+    "hot": false,
+    "desc": "Sáng tạo nội dung, viết bài về lĩnh vực in ấn & sticker, bắt kịp các xu hướng trendy.",
+    "responsibilities": [
+      "Làm các công việc liên quan đến sáng tạo nội dung, viết bài.",
+      "Trao đổi cụ thể khi phỏng vấn theo chuyên môn và năng lực."
+    ],
+    "requirements": [
+      "Yêu thích sticker, kỹ năng viết tốt.",
+      "Có kiến thức trong lĩnh vực in ấn và sticker.",
+      "Cập nhật xu hướng và trend của Việt Nam và thế giới.",
+      "Khả năng phân tích, sáng tạo, logic; tự giác, trách nhiệm cao."
+    ],
+    "benefits": [
+      "Lương trao đổi cụ thể khi phỏng vấn theo năng lực.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "09:00 - 18:00 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "camera-video-editor",
+    "title": "Nhân viên Quay dựng phim & Chụp ảnh",
+    "dept": "Media",
+    "type": "Toàn thời gian",
+    "location": "Quận 10, TP.HCM",
+    "salary": "7 - 8 triệu",
+    "hot": false,
+    "desc": "Quay video, chụp hình, dựng video và sáng tạo nội dung hình ảnh theo trend.",
+    "responsibilities": [
+      "Quay video, chụp hình, dựng video, chỉnh sửa hình ảnh.",
+      "Hỗ trợ xây dựng kịch bản, sáng tạo nội dung video/hình ảnh theo trend.",
+      "Xây dựng và quản lý kho lưu trữ video, hình ảnh của công ty.",
+      "Các công việc khác theo phân công của quản lý."
+    ],
+    "requirements": [
+      "Không yêu cầu kinh nghiệm.",
+      "Ưu tiên biết sử dụng CapCut PC.",
+      "Phong cách sáng tạo video hiện đại, thẩm mỹ tốt.",
+      "Khả năng phân tích, sáng tạo, logic; tự giác, trách nhiệm cao."
+    ],
+    "benefits": [
+      "Lương cơ bản 7 - 8 triệu.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  },
+  {
+    "id": "media-staff",
+    "title": "Nhân viên Media",
+    "dept": "Media",
+    "type": "Toàn thời gian",
+    "location": "Quận 10, TP.HCM",
+    "salary": "7 - 8 triệu",
+    "hot": false,
+    "desc": "Quay dựng video, chụp ảnh, viết nội dung và lên lịch đăng bài media trên các kênh social.",
+    "responsibilities": [
+      "Quay, dựng video, chụp ảnh.",
+      "Hỗ trợ xây dựng kịch bản, sáng tạo nội dung video mới theo trend.",
+      "Viết nội dung và lên lịch đăng bài media lên các kênh social.",
+      "Xây dựng và quản lý kho lưu trữ video, hình ảnh của công ty.",
+      "Góp ý, xây dựng nội dung media cho quản lý."
+    ],
+    "requirements": [
+      "Có kinh nghiệm quay phim chụp ảnh.",
+      "Ưu tiên biết CapCut PC, máy ảnh, máy quay, thiết bị phụ trợ.",
+      "Phong cách sáng tạo hiện đại, thẩm mỹ tốt.",
+      "Khả năng phân tích, sáng tạo, logic; tự giác, trách nhiệm cao."
+    ],
+    "benefits": [
+      "Lương cơ bản 7 - 8 triệu.",
+      "Nghỉ lễ, tết theo Luật lao động.",
+      "Công ty có teabreak, teambuilding."
+    ],
+    "schedule": "08:30 - 17:30 từ T2 - T7 (nghỉ trưa 60 phút)"
+  }
+]
