@@ -11,8 +11,8 @@ interface Props {
 }
 
 const siteUrl = 'https://truongthi.stickerfactory.vn';
-const defaultImage = 'https://cdn.hstatic.net/files/1000090040/file/1._thi_grey_bg_ea4df9a629d14942a9ecdd3a14366b8d_1024x1024.jpg';
-const { title, description = 'Co-Founder & Partner Director at Sticker Factory | Custom Sticker & B2B Printing Solutions | Vietnam', image = defaultImage } = Astro.props;
+const ogImageUrl = 'https://leon.stickerfactory.vn/og-image.png';
+const { title, description = 'Founder / Business Development tại Sticker Factory – chuyên giải pháp sticker, in ấn và sản phẩm nhận diện thương hiệu.', image = ogImageUrl } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, siteUrl);
 ---
 
@@ -29,12 +29,13 @@ const canonicalURL = new URL(Astro.url.pathname, siteUrl);
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content="Thi Nguyen Leon | Sticker Factory" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
-    <meta property="og:image:width" content="1024" />
-    <meta property="og:image:height" content="1024" />
-    <meta property="og:site_name" content="Thi Nguyễn (Leon) | Sticker Factory" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Thi Nguyen Leon | Sticker Factory" />
+    <meta property="og:site_name" content="Thi Nguyen Leon | Sticker Factory" />
     <meta property="og:locale" content="vi_VN" />
 
     <!-- Twitter Card -->
@@ -43,6 +44,8 @@ const canonicalURL = new URL(Astro.url.pathname, siteUrl);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:width" content="1200" />
+    <meta name="twitter:image:height" content="630" />
     <meta name="twitter:creator" content="@truongthibd85" />
 
     <title>{title}</title>
