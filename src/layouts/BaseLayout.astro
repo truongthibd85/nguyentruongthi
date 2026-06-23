@@ -12,7 +12,7 @@ interface Props {
 
 const siteUrl = 'https://truongthi.stickerfactory.vn';
 const ogImageUrl = '/seo_avatar.png';
-const { title, description = 'Founder / Business Development tại Sticker Factory – chuyên giải pháp sticker, in ấn và sản phẩm nhận diện thương hiệu.', image = ogImageUrl } = Astro.props;
+const { title, description = 'Thi Nguyen (Leon) — Founder at Sticker Factory. Custom stickers, labels, decals, UV eco-digital printing & packaging solutions for your brand.', image = ogImageUrl } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, siteUrl);
 ---
 
@@ -26,6 +26,26 @@ const canonicalURL = new URL(Astro.url.pathname, siteUrl);
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalURL} />
 
+    <!-- JSON-LD: Person + Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Thi Nguyen",
+      "alternateName": "Leon",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Sticker Factory",
+        "url": "https://truongthi.stickerfactory.vn",
+        "description": "Custom sticker, label, decal, UV eco-digital printing & packaging solutions",
+        "areaServed": "VN",
+        "knowsAbout": ["Sticker", "Decal", "UV Eco-Digital Print", "Label", "Packaging"]
+      },
+      "knowsAbout": ["Sticker Production", "Brand Identity", "Custom Printing", "UV Eco-Digital", "Label Design"],
+      "url": "https://truongthi.stickerfactory.vn",
+      "image": `${siteUrl}/seo_avatar.png`
+    })} />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
@@ -34,7 +54,7 @@ const canonicalURL = new URL(Astro.url.pathname, siteUrl);
     <meta property="og:image" content={image} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Thi Nguyen Leon | Sticker Factory" />
+    <meta property="og:image:alt" content="Thi Nguyen (Leon), Founder of Sticker Factory — custom sticker, label, decal and UV eco-digital printing solutions" />
     <meta property="og:site_name" content="Thi Nguyen Leon | Sticker Factory" />
     <meta property="og:locale" content="vi_VN" />
 
